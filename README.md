@@ -1,3 +1,24 @@
+
+# Wikipedia Book Generator
+
+## Goals
+
+[_] Using a search term like "Abraham Lincoln", return the Wikipedia page summary for the initial search term, a list of all included internal Wiki links in the summary, and all of the summaries of the linked pages.
+
+[_] Optionally also include the full text of the Wikipedia article for the initial search term.
+
+[_] To clarify which page to return, first perform a search call returning the top 5 or 10 resulting pages and have the user select their desired page from the available results.
+
+[_] Output the returned data as simply styled HTML to the page.
+
+[_] Test that the output HTML creates decent looking PDFs or printed pages in the automatic print dialogs for:
+    [_] Chrome
+    [_] Firefox
+    [_] Safari
+    [_] Edge
+
+## Tech Stack Information
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
@@ -42,3 +63,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
