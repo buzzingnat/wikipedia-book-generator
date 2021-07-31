@@ -3,19 +3,19 @@
 
 ## Goals
 
-[_] Using a search term like "Abraham Lincoln", return the Wikipedia page summary for the initial search term, a list of all included internal Wiki links in the summary, and all of the summaries of the linked pages.
+- [ ] Using a search term like "Abraham Lincoln", return the Wikipedia page summary for the initial search term, a list of all included internal Wiki links in the summary, and all of the summaries of the linked pages.
 
-[_] Optionally also include the full text of the Wikipedia article for the initial search term.
+- [ ] Optionally also include the full text of the Wikipedia article for the initial search term.
 
-[_] To clarify which page to return, first perform a search call returning the top 5 or 10 resulting pages and have the user select their desired page from the available results.
+- [ ] To clarify which page to return, first perform a search call returning the top 5 or 10 resulting pages and have the user select their desired page from the available results.
 
-[_] Output the returned data as simply styled HTML to the page.
+- [ ] Output the returned data as simply styled HTML to the page.
 
-[_] Test that the output HTML creates decent looking PDFs or printed pages in the automatic print dialogs for:
-    [_] Chrome
-    [_] Firefox
-    [_] Safari
-    [_] Edge
+- [ ] Test that the output HTML creates decent looking PDFs or printed pages in the automatic print dialogs for:
+    - [ ] Chrome
+    - [ ] Firefox
+    - [ ] Safari
+    - [ ] Edge
 
 ## Tech Stack Information
 
