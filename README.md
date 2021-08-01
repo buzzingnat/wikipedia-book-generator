@@ -3,11 +3,16 @@
 
 ## Goals
 
-- [ ] Using a search term like "Abraham Lincoln", return the Wikipedia page summary for the initial search term, a list of all included internal Wiki links in the summary, and all of the summaries of the linked pages.
+- [ ] Using a search term (like "Abraham Lincoln")
+    - [ ] return the Wikipedia page summary for the initial search term
+    - [ ] a list of all included internal Wiki links in the summary
+    - [ ] output all of the summaries of the linked pages.
+    - [ ] optionally, include the full text of the Wikipedia article for the initial search term.
 
-- [ ] Optionally also include the full text of the Wikipedia article for the initial search term.
-
-- [ ] To clarify which page to return, first perform a search call returning the top 5 or 10 resulting pages and have the user select their desired page from the available results.
+- [ ] To clarify which page to return
+    - [x] first perform a search call returning the top ~~5 or~~ 10 resulting pages
+    - [x] have the user select their desired page from the available results.
+    - [ ] make a second call returning all desired data with selected page id
 
 - [ ] Output the returned data as simply styled HTML to the page.
 

@@ -1,5 +1,722 @@
 API calls:
 
+search:
+https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=lincoln&format=json
+
+get summary and links using page id:
 https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Abraham%20Lincoln&section=0&prop=links|text
 
+get summary and all associated images using page id:
+https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Abraham%20Lincoln&section=0&prop=images|text
+
+returned JSON data of queries:
+
 https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=lincoln&format=json
+returns:
+{
+"batchcomplete": "",
+"continue": {
+"sroffset": 10,
+"continue": "-||"
+},
+"query": {
+"searchinfo": {
+"totalhits": 116296
+},
+"search": [
+{
+"ns": 0,
+"title": "Lincoln",
+"pageid": 17872,
+"size": 8318,
+"wordcount": 870,
+"snippet": "County <span class=\"searchmatch\">Lincoln</span>, Delaware <span class=\"searchmatch\">Lincoln</span>, Idaho <span class=\"searchmatch\">Lincoln</span>, Illinois <span class=\"searchmatch\">Lincoln</span>, Indiana <span class=\"searchmatch\">Lincoln</span>, Iowa <span class=\"searchmatch\">Lincoln</span> Center, Kansas <span class=\"searchmatch\">Lincoln</span> Parish, Louisiana <span class=\"searchmatch\">Lincoln</span>, Maine",
+"timestamp": "2021-03-11T01:25:41Z"
+},
+{
+"ns": 0,
+"title": "Abraham Lincoln",
+"pageid": 307,
+"size": 181692,
+"wordcount": 19845,
+"snippet": "Abraham <span class=\"searchmatch\">Lincoln</span> (/ˈlɪŋkən/; February 12, 1809 – April 15, 1865) was an American lawyer and statesman who served as the 16th president of the United States",
+"timestamp": "2021-07-14T02:12:20Z"
+},
+{
+"ns": 0,
+"title": "Assassination of Abraham Lincoln",
+"pageid": 4924254,
+"size": 77803,
+"wordcount": 8483,
+"snippet": "Abraham <span class=\"searchmatch\">Lincoln</span>, the 16th President of the United States, was assassinated by well-known stage actor John Wilkes Booth on April 14, 1865, while attending",
+"timestamp": "2021-07-08T10:40:09Z"
+},
+{
+"ns": 0,
+"title": "Andrew Lincoln",
+"pageid": 1309057,
+"size": 32406,
+"wordcount": 1879,
+"snippet": "professionally as Andrew <span class=\"searchmatch\">Lincoln</span>, is an English actor. His first major role was as the character Egg in the BBC drama This Life (1996–1997). <span class=\"searchmatch\">Lincoln</span> later portrayed",
+"timestamp": "2021-07-15T04:16:07Z"
+},
+{
+"ns": 0,
+"title": "Robert Todd Lincoln",
+"pageid": 337019,
+"size": 45830,
+"wordcount": 4650,
+"snippet": "Todd <span class=\"searchmatch\">Lincoln</span> (August 1, 1843 – July 26, 1926) was an American lawyer, businessman, and politician. He was the eldest son of President Abraham <span class=\"searchmatch\">Lincoln</span> and",
+"timestamp": "2021-05-26T17:20:16Z"
+},
+{
+"ns": 0,
+"title": "Lincoln, England",
+"pageid": 17880,
+"size": 87111,
+"wordcount": 8420,
+"snippet": "<span class=\"searchmatch\">Lincoln</span> (/ˈlɪŋkən/) is a cathedral city and county town of Lincolnshire in the East Midlands of England. The non-metropolitan district of <span class=\"searchmatch\">Lincoln</span> had",
+"timestamp": "2021-07-09T21:40:22Z"
+},
+{
+"ns": 0,
+"title": "Lincoln Navigator",
+"pageid": 954829,
+"size": 49409,
+"wordcount": 4971,
+"snippet": "The <span class=\"searchmatch\">Lincoln</span> Navigator is a full-size luxury SUV marketed and sold by the <span class=\"searchmatch\">Lincoln</span> brand of Ford Motor Company since the 1998 model year. Sold primarily",
+"timestamp": "2021-07-12T12:15:10Z"
+},
+{
+"ns": 0,
+"title": "Lincoln (film)",
+"pageid": 31724592,
+"size": 65230,
+"wordcount": 5996,
+"snippet": "<span class=\"searchmatch\">Lincoln</span> is a 2012 American biographical historical drama film directed and produced by Steven Spielberg, starring Daniel Day-Lewis as United States President",
+"timestamp": "2021-07-18T18:03:33Z"
+},
+{
+"ns": 0,
+"title": "Lincoln Aviator",
+"pageid": 954844,
+"size": 20325,
+"wordcount": 2076,
+"snippet": "<span class=\"searchmatch\">Lincoln</span> Aviator is a three-row, midsized luxury SUV marketed and sold by the <span class=\"searchmatch\">Lincoln</span> brand of Ford Motor Company. One of four SUVs offered by <span class=\"searchmatch\">Lincoln</span>",
+"timestamp": "2021-07-12T12:15:18Z"
+},
+{
+"ns": 0,
+"title": "Lincoln MKX",
+"pageid": 3599587,
+"size": 23130,
+"wordcount": 2131,
+"snippet": "The <span class=\"searchmatch\">Lincoln</span> MKX is a mid-size luxury crossover SUV marketed and sold by the <span class=\"searchmatch\">Lincoln</span> brand of Ford Motor Company. As <span class=\"searchmatch\">Lincoln</span> is phasing out its use of",
+"timestamp": "2021-07-12T12:12:36Z"
+}
+]
+}
+}
+
+
+https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Abraham%20Lincoln&section=0&prop=links|text
+returns:
+{
+"parse": {
+"title": "Abraham Lincoln",
+"pageid": 307,
+"text": {
+"*": "<div class=\"mw-parser-output\"><div class=\"shortdescription nomobile noexcerpt noprint searchaux\" style=\"display:none\">16th President of the United States (1861–65)</div>\n<style data-mw-deduplicate=\"TemplateStyles:r1033289096\">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role=\"note\" class=\"hatnote navigation-not-searchable\">This article is about the 16th president of the United States. For other uses, see <a href=\"/wiki/Abraham_Lincoln_(disambiguation)\" class=\"mw-disambig\" title=\"Abraham Lincoln (disambiguation)\">Abraham Lincoln (disambiguation)</a>.</div>\n<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r1033289096\"/><div role=\"note\" class=\"hatnote navigation-not-searchable\">\"Abe Lincoln\" redirects here. For the jazz musician, see <a href=\"/wiki/Abe_Lincoln_(musician)\" title=\"Abe Lincoln (musician)\">Abe Lincoln (musician)</a>.</div>\n<p class=\"mw-empty-elt\">\n\n\n\n</p>\n<table class=\"infobox vcard\"><tbody><tr><th colspan=\"2\" class=\"infobox-above\" style=\"font-size: 100%;\"><div style=\"display:inline-block; font-size:125%;\" class=\"fn\">Abraham Lincoln</div></th></tr><tr><td colspan=\"2\" class=\"infobox-image\"><a href=\"/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg\" class=\"image\" title=\"An iconic photograph of a bearded Abraham Lincoln showing his head and shoulders.\"><img alt=\"An iconic photograph of a bearded Abraham Lincoln showing his head and shoulders.\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/220px-Abraham_Lincoln_O-77_matte_collodion_print.jpg\" decoding=\"async\" width=\"220\" height=\"284\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/330px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 2x\" data-file-width=\"2200\" data-file-height=\"2835\" /></a><div class=\"infobox-caption\" style=\"line-height:normal;padding-top:0.2em;\">Portrait by <a href=\"/wiki/Alexander_Gardner_(photographer)\" title=\"Alexander Gardner (photographer)\">Alexander Gardner</a>, November 1863</div></td></tr><tr><td colspan=\"2\" class=\"infobox-full-data\"></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender;line-height:normal;padding:0.2em 0.2em\">16th&#32;<a href=\"/wiki/President_of_the_United_States\" title=\"President of the United States\">President of the United States</a></th></tr><tr><td colspan=\"2\" class=\"infobox-full-data\" style=\"border-bottom:none\"><span class=\"nowrap\"><b>In office</b></span><br />March 4, 1861&#160;–&#32;April 15, 1865</td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\"><a href=\"/wiki/Vice_President_of_the_United_States\" title=\"Vice President of the United States\">Vice President</a></span></th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li><a href=\"/wiki/Hannibal_Hamlin\" title=\"Hannibal Hamlin\">Hannibal Hamlin</a> (1861–1865)</li>\n<li>Andrew Johnson (Mar–Apr 1865)</li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Preceded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/James_Buchanan\" title=\"James Buchanan\">James Buchanan</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Succeeded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/Andrew_Johnson\" title=\"Andrew Johnson\">Andrew Johnson</a></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender;line-height:normal;padding:0.2em 0.2em\">Member of the <span style=\"display: inline-block;\"><a href=\"/wiki/United_States_House_of_Representatives\" title=\"United States House of Representatives\">U.S.&#32;House&#32;of&#32;Representatives</a></span><br />from <a href=\"/wiki/Illinois\" title=\"Illinois\">Illinois</a>'s <span data-sort-value=\"Illinois07&#160;!\"><a href=\"/wiki/Illinois%27s_7th_congressional_district\" title=\"Illinois&#39;s 7th congressional district\">7th</a></span> district</th></tr><tr><td colspan=\"2\" class=\"infobox-full-data\" style=\"border-bottom:none\"><span class=\"nowrap\"><b>In office</b></span><br />March 4, 1847&#160;–&#32;March 3, 1849</td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Preceded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/John_Henry_(representative)\" title=\"John Henry (representative)\">John Henry</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Succeeded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/Thomas_L._Harris\" title=\"Thomas L. Harris\">Thomas L. Harris</a></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender;line-height:normal;padding:0.2em 0.2em\">Member of the<br /><a href=\"/wiki/Illinois_House_of_Representatives\" title=\"Illinois House of Representatives\">Illinois House of Representatives</a><br />from <a href=\"/wiki/Sangamon_County\" class=\"mw-redirect\" title=\"Sangamon County\">Sangamon County</a></th></tr><tr><td colspan=\"2\" class=\"infobox-full-data\" style=\"border-bottom:none\"><span class=\"nowrap\"><b>In office</b></span><br />December 1, 1834&#160;–&#32;December 4, 1842</td></tr><tr style=\"display:none\"><td colspan=\"2\">\n</td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender\">Personal details</th></tr><tr><th scope=\"row\" class=\"infobox-label\">Born</th><td class=\"infobox-data\"><span style=\"display:none\">(<span class=\"bday\">1809-02-12</span>)</span>February 12, 1809<br /><a href=\"/wiki/Sinking_Spring_Farm\" class=\"mw-redirect\" title=\"Sinking Spring Farm\">Sinking Spring Farm</a>, <a href=\"/wiki/Kentucky\" title=\"Kentucky\">Kentucky</a>, U.S.</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Died</th><td class=\"infobox-data\">April 15, 1865<span style=\"display:none\">(1865-04-15)</span> (aged&#160;56)<br /><a href=\"/wiki/Washington,_D.C.\" title=\"Washington, D.C.\">Washington, D.C.</a>, U.S.</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Cause&#160;of&#160;death</th><td class=\"infobox-data\"><a href=\"/wiki/Assassination_of_Abraham_Lincoln\" title=\"Assassination of Abraham Lincoln\">Assassination</a><br />(<a href=\"/wiki/Gunshot_wound\" title=\"Gunshot wound\">gunshot wound</a> to the head)</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Resting place</th><td class=\"infobox-data label\"><a href=\"/wiki/Lincoln_Tomb\" title=\"Lincoln Tomb\">Lincoln Tomb</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Political party</th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li><a href=\"/wiki/Whig_Party_(United_States)\" title=\"Whig Party (United States)\">Whig</a> (before 1854)</li>\n<li><a href=\"/wiki/Republican_Party_(United_States)\" title=\"Republican Party (United States)\">Republican</a> (1854–1864)</li>\n<li><a href=\"/wiki/National_Union_Party_(United_States)\" title=\"National Union Party (United States)\">National Union</a> (1864–1865)</li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Height</th><td class=\"infobox-data\">6&#160;ft 4&#160;in (193&#160;cm)<sup id=\"cite_ref-LincolnHeight_1-0\" class=\"reference\"><a href=\"#cite_note-LincolnHeight-1\">&#91;1&#93;</a></sup></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Spouse(s)</th><td class=\"infobox-data\"><div style=\"display:inline;white-space:nowrap;\"><div style=\"display:inline-block;line-height:normal;\"><a href=\"/wiki/Mary_Todd_Lincoln\" title=\"Mary Todd Lincoln\">Mary Todd</a></div>&#32;<div style=\"display:inline-block;\">&#8203;</div>&#40;<abbr title=\"married\">m.</abbr>&#160;<span title=\"November 4, 1842\" class=\"rt-commentedText\">1842</span>&#41;<wbr />&#8203;</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Children</th><td class=\"infobox-data\"><div class=\"hlist hlist-separated\"><ul><li><a href=\"/wiki/Robert_Todd_Lincoln\" title=\"Robert Todd Lincoln\">Robert</a></li><li><a href=\"/wiki/Edward_Baker_Lincoln\" title=\"Edward Baker Lincoln\">Edward</a></li><li><a href=\"/wiki/William_Wallace_Lincoln\" title=\"William Wallace Lincoln\">Willie</a></li><li><a href=\"/wiki/Tad_Lincoln\" title=\"Tad Lincoln\">Tad</a></li></ul></div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Mother</th><td class=\"infobox-data\"><a href=\"/wiki/Nancy_Hanks_Lincoln\" class=\"mw-redirect\" title=\"Nancy Hanks Lincoln\">Nancy Hanks</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Father</th><td class=\"infobox-data\"><a href=\"/wiki/Thomas_Lincoln\" title=\"Thomas Lincoln\">Thomas Lincoln</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Relatives</th><td class=\"infobox-data\"><a href=\"/wiki/Lincoln_family\" title=\"Lincoln family\">Lincoln family</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Occupation</th><td class=\"infobox-data\"><div class=\"hlist hlist-separated\"><ul><li>Politician</li><li>lawyer</li></ul></div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Signature</th><td class=\"infobox-data\"><a href=\"/wiki/File:Abraham_Lincoln_1862_signature.svg\" class=\"image\" title=\"Abraham Lincoln&#39;s signature\"><img alt=\"Cursive signature in ink\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Abraham_Lincoln_1862_signature.svg/128px-Abraham_Lincoln_1862_signature.svg.png\" decoding=\"async\" width=\"128\" height=\"21\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Abraham_Lincoln_1862_signature.svg/192px-Abraham_Lincoln_1862_signature.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Abraham_Lincoln_1862_signature.svg/256px-Abraham_Lincoln_1862_signature.svg.png 2x\" data-file-width=\"585\" data-file-height=\"95\" /></a></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender\">Military service</th></tr><tr><th scope=\"row\" class=\"infobox-label\">Allegiance</th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li>United States</li>\n<li><a href=\"/wiki/Illinois\" title=\"Illinois\">Illinois</a></li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Branch/service</th><td class=\"infobox-data\"><a href=\"/wiki/Illinois_Militia\" class=\"mw-redirect\" title=\"Illinois Militia\">Illinois Militia</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Years&#160;of service</th><td class=\"infobox-data\">1832</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Rank</th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li><a href=\"/wiki/Captain_(United_States_O-3)\" title=\"Captain (United States O-3)\">Captain</a><sup id=\"cite_ref-Ranks_2-0\" class=\"reference\"><a href=\"#cite_note-Ranks-2\">&#91;a&#93;</a></sup></li>\n<li><a href=\"/wiki/Private_(United_States)\" class=\"mw-redirect\" title=\"Private (United States)\">Private</a><sup id=\"cite_ref-Ranks_2-1\" class=\"reference\"><a href=\"#cite_note-Ranks-2\">&#91;a&#93;</a></sup></li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Battles/wars</th><td class=\"infobox-data\"><style data-mw-deduplicate=\"TemplateStyles:r886050385\">.mw-parser-output .treeview ul{padding:0;margin:0}.mw-parser-output .treeview li{padding:0;margin:0;list-style-type:none;list-style-image:none}.mw-parser-output .treeview li li{background:url(\"//upload.wikimedia.org/wikipedia/commons/f/f2/Treeview-grey-line.png\")no-repeat 0 -2981px;padding-left:21px;text-indent:0.3em}.mw-parser-output .treeview li li:last-child{background-position:0 -5971px}.mw-parser-output .treeview li.emptyline>ul>.mw-empty-elt:first-child+.emptyline,.mw-parser-output .treeview li.emptyline>ul>li:first-child{background-position:0 9px}</style><div class=\"treeview\">\n<ul><li><a href=\"/wiki/American_Indian_Wars\" title=\"American Indian Wars\">American Indian Wars</a>\n<ul><li><a href=\"/wiki/Black_Hawk_War\" title=\"Black Hawk War\">Black Hawk War</a>\n<ul><li><a href=\"/wiki/Battle_of_Kellogg%27s_Grove\" title=\"Battle of Kellogg&#39;s Grove\">Battle of Kellogg's Grove</a></li>\n<li><a href=\"/wiki/Battle_of_Stillman%27s_Run\" title=\"Battle of Stillman&#39;s Run\">Battle of Stillman's Run</a></li></ul></li></ul></li></ul>\n</div></td></tr></tbody></table>\n<style data-mw-deduplicate=\"TemplateStyles:r1013635363\">.mw-parser-output .sidebar{width:22em;float:right;clear:right;margin:0.5em 0 1em 1em;background:#f8f9fa;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;display:table}body.skin-minerva .mw-parser-output .sidebar{display:table!important;float:right!important;margin:0.5em 0 1em 1em!important}.mw-parser-output .sidebar a{white-space:nowrap}.mw-parser-output .sidebar-wraplinks a{white-space:normal}.mw-parser-output .sidebar-subgroup{width:100%;margin:0;border-spacing:0}.mw-parser-output .sidebar-left{float:left;clear:left;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-none{float:none;clear:both;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-outer-title{padding-bottom:0.2em;font-size:125%;line-height:1.2em;font-weight:bold}.mw-parser-output .sidebar-top-image{padding:0.4em 0}.mw-parser-output .sidebar-top-caption,.mw-parser-output .sidebar-pretitle-with-top-image,.mw-parser-output .sidebar-caption{padding-top:0.2em;line-height:1.2em}.mw-parser-output .sidebar-pretitle{padding-top:0.4em;line-height:1.2em}.mw-parser-output .sidebar-title,.mw-parser-output .sidebar-title-with-pretitle{padding:0.2em 0.4em;font-size:145%;line-height:1.2em}.mw-parser-output .sidebar-title-with-pretitle{padding-top:0}.mw-parser-output .sidebar-image{padding:0.2em 0 0.4em}.mw-parser-output .sidebar-heading{padding:0.1em}.mw-parser-output .sidebar-content{padding:0 0.1em 0.4em}.mw-parser-output .sidebar-content-with-subgroup{padding:0.1em 0 0.2em}.mw-parser-output .sidebar-above,.mw-parser-output .sidebar-below{padding:0.3em 0.4em;font-weight:bold}.mw-parser-output .sidebar-collapse .sidebar-above,.mw-parser-output .sidebar-collapse .sidebar-below{border-top:1px solid #aaa;border-bottom:1px solid #aaa}.mw-parser-output .sidebar-navbar{text-align:right;font-size:115%}.mw-parser-output .sidebar-collapse .sidebar-navbar{padding-top:0.6em}.mw-parser-output .sidebar-list-title{text-align:left;font-weight:bold;line-height:1.6em;font-size:105%}.mw-parser-output .sidebar-list-title-c{text-align:center;margin:0 3.3em}@media(max-width:720px){body.mediawiki .mw-parser-output .sidebar{width:100%!important;clear:both;float:none!important;margin-left:0!important;margin-right:0!important}}</style><table class=\"sidebar nomobile sidebar-wraplinks vcard hlist\" style=\"border: 4px double #d69d36\"><tbody><tr><th class=\"sidebar-title\" style=\"font-size: 110%; padding: 0; line-height: 150%;\"><table><tbody><tr>\n<td style=\"background: #002466; vertical-align:middle; padding:5px;\"><a href=\"/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg\" class=\"image\"><img alt=\"Abraham Lincoln O-77 matte collodion print.jpg\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/75px-Abraham_Lincoln_O-77_matte_collodion_print.jpg\" decoding=\"async\" width=\"75\" height=\"97\" class=\"thumbborder\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/113px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/150px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 2x\" data-file-width=\"2200\" data-file-height=\"2835\" /></a></td>\n<td style=\"background: #002466; vertical-align:middle; padding:6px; width:100%;\"><div style=\"font-size:88%; line-height:normal;\"><span style=\"color: #FFF\">This article is part of <br />a series about</span></div><span class=\"vcard\"><span class=\"fn\"><a class=\"mw-selflink selflink\"><span style=\"color: #FFF\">Abraham Lincoln</span></a></span></span></td>\n</tr></tbody></table></th></tr><tr><td class=\"sidebar-content\" style=\"padding:0.3em;\">\n<div style=\"font-weight: bold;line-height:normal;\">Personal</div>\n<ul><li><a href=\"/wiki/Early_life_and_career_of_Abraham_Lincoln\" title=\"Early life and career of Abraham Lincoln\">Early life and career</a></li>\n<li><a href=\"/wiki/Lincoln_family\" title=\"Lincoln family\">Family</a></li>\n<li><a href=\"/wiki/Health_of_Abraham_Lincoln\" title=\"Health of Abraham Lincoln\">Health</a></li>\n<li><a href=\"/wiki/Sexuality_of_Abraham_Lincoln\" title=\"Sexuality of Abraham Lincoln\">Sexuality</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Political</div>\n<ul><li><a href=\"/wiki/Political_career_of_Abraham_Lincoln_(1849%E2%80%931861)\" title=\"Political career of Abraham Lincoln (1849–1861)\">Political career, 1849–1861</a></li>\n<li><a href=\"/wiki/Lincoln%E2%80%93Douglas_debates\" title=\"Lincoln–Douglas debates\">Lincoln–Douglas debates</a></li>\n<li><a href=\"/wiki/Cooper_Union_speech\" title=\"Cooper Union speech\">Cooper Union speech</a></li>\n<li><a href=\"/wiki/Abraham_Lincoln%27s_farewell_address\" title=\"Abraham Lincoln&#39;s farewell address\">Farewell address</a></li>\n<li><a href=\"/wiki/Abraham_Lincoln_and_slavery\" title=\"Abraham Lincoln and slavery\">Views on slavery</a></li>\n<li><a href=\"/wiki/Religious_views_of_Abraham_Lincoln\" title=\"Religious views of Abraham Lincoln\">Views on religion</a></li>\n<li><a href=\"/wiki/Electoral_history_of_Abraham_Lincoln\" title=\"Electoral history of Abraham Lincoln\">Electoral history</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">16th President of the United States</div>\n<ul><li><a href=\"/wiki/Presidency_of_Abraham_Lincoln\" title=\"Presidency of Abraham Lincoln\">Presidency</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">First term</div>\n<ul><li><a href=\"/wiki/Presidential_transition_of_Abraham_Lincoln\" title=\"Presidential transition of Abraham Lincoln\">Transition</a></li>\n<li><a href=\"/wiki/First_inauguration_of_Abraham_Lincoln\" title=\"First inauguration of Abraham Lincoln\">1st inauguration</a>\n<ul><li><a href=\"/wiki/Abraham_Lincoln%27s_first_inaugural_address\" title=\"Abraham Lincoln&#39;s first inaugural address\">Address</a></li></ul></li>\n<li><a href=\"/wiki/Hannibal_Hamlin\" title=\"Hannibal Hamlin\">Hannibal Hamlin</a></li>\n<li><a href=\"/wiki/American_Civil_War\" title=\"American Civil War\">American Civil War</a>\n<ul><li><a href=\"/wiki/Union_(American_Civil_War)\" title=\"Union (American Civil War)\">The Union</a></li>\n<li><a href=\"/wiki/Emancipation_Proclamation\" title=\"Emancipation Proclamation\">Emancipation Proclamation</a></li>\n<li><a href=\"/wiki/Ten_percent_plan\" title=\"Ten percent plan\">Ten percent plan</a></li>\n<li><a href=\"/wiki/Gettysburg_Address\" title=\"Gettysburg Address\">Gettysburg Address</a></li>\n<li><a href=\"/wiki/Thirteenth_Amendment_to_the_United_States_Constitution\" title=\"Thirteenth Amendment to the United States Constitution\">13th Amendment</a></li></ul></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Second term</div>\n<ul><li><a href=\"/wiki/Second_inauguration_of_Abraham_Lincoln\" title=\"Second inauguration of Abraham Lincoln\">2nd inauguration</a>\n<ul><li><a href=\"/wiki/Abraham_Lincoln%27s_second_inaugural_address\" title=\"Abraham Lincoln&#39;s second inaugural address\">Address</a></li></ul></li>\n<li><a href=\"/wiki/Andrew_Johnson\" title=\"Andrew Johnson\">Andrew Johnson</a></li>\n<li><a href=\"/wiki/Reconstruction_era\" title=\"Reconstruction era\">Reconstruction</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Presidential elections</div>\n<ul><li><a href=\"/wiki/1860_United_States_presidential_election\" title=\"1860 United States presidential election\">1860</a>\n<ul><li><a href=\"/wiki/1860_Republican_National_Convention\" title=\"1860 Republican National Convention\">Convention</a></li></ul></li></ul>\n<ul><li><a href=\"/wiki/1864_United_States_presidential_election\" title=\"1864 United States presidential election\">1864</a>\n<ul><li><a href=\"/wiki/1864_National_Union_National_Convention\" title=\"1864 National Union National Convention\">Convention</a></li></ul></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Assassination and legacy</div>\n<ul><li><a href=\"/wiki/Assassination_of_Abraham_Lincoln\" title=\"Assassination of Abraham Lincoln\">Assassination</a></li>\n<li><a href=\"/wiki/Funeral_and_burial_of_Abraham_Lincoln\" title=\"Funeral and burial of Abraham Lincoln\">Funeral</a></li></ul>\n<ul><li><a href=\"/wiki/Abraham_Lincoln#Historical_reputation\" title=\"Abraham Lincoln\">Historical reputation</a></li>\n<li><a href=\"/wiki/Memorials_to_Abraham_Lincoln\" title=\"Memorials to Abraham Lincoln\">Memorials</a></li>\n<li><a href=\"/wiki/Cultural_depictions_of_Abraham_Lincoln\" title=\"Cultural depictions of Abraham Lincoln\">Depictions</a></li></ul>\n<ul><li><a href=\"/wiki/Bibliography_of_Abraham_Lincoln\" title=\"Bibliography of Abraham Lincoln\">Bibliography</a></li></ul>\n<ul><li><a href=\"/wiki/Outline_of_Abraham_Lincoln\" title=\"Outline of Abraham Lincoln\">Topical guide</a></li></ul>\n<hr />\n<img alt=\"\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/70px-Seal_of_the_President_of_the_United_States.svg.png\" decoding=\"async\" width=\"70\" height=\"70\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/105px-Seal_of_the_President_of_the_United_States.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/140px-Seal_of_the_President_of_the_United_States.svg.png 2x\" data-file-width=\"2424\" data-file-height=\"2425\" /></td>\n</tr><tr><td class=\"sidebar-navbar\" style=\"text-align:center;\"><style data-mw-deduplicate=\"TemplateStyles:r992953826\">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:\"[ \"}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:\" ]\"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}.mw-parser-output .infobox .navbar{font-size:100%}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style><div class=\"navbar plainlinks hlist navbar-mini\"><ul><li class=\"nv-view\"><a href=\"/wiki/Template:Abraham_Lincoln_series\" title=\"Template:Abraham Lincoln series\"><abbr title=\"View this template\">v</abbr></a></li><li class=\"nv-talk\"><a href=\"/wiki/Template_talk:Abraham_Lincoln_series\" title=\"Template talk:Abraham Lincoln series\"><abbr title=\"Discuss this template\">t</abbr></a></li><li class=\"nv-edit\"><a class=\"external text\" href=\"https://en.wikipedia.org/w/index.php?title=Template:Abraham_Lincoln_series&amp;action=edit\"><abbr title=\"Edit this template\">e</abbr></a></li></ul></div></td></tr></tbody></table>\n<p><b>Abraham Lincoln</b> (<span class=\"rt-commentedText nowrap\"><span class=\"IPA nopopups noexcerpt\"><a href=\"/wiki/Help:IPA/English\" title=\"Help:IPA/English\">/<span style=\"border-bottom:1px dotted\"><span title=\"/ˈ/: primary stress follows\">ˈ</span><span title=\"&#39;l&#39; in &#39;lie&#39;\">l</span><span title=\"/ɪ/: &#39;i&#39; in &#39;kit&#39;\">ɪ</span><span title=\"/ŋ/: &#39;ng&#39; in &#39;sing&#39;\">ŋ</span><span title=\"&#39;k&#39; in &#39;kind&#39;\">k</span><span title=\"/ən/: &#39;on&#39; in &#39;button&#39;\">ən</span></span>/</a></span></span>; February 12, 1809 – April 15, 1865) was an American lawyer and statesman who served as the 16th <a href=\"/wiki/President_of_the_United_States\" title=\"President of the United States\">president of the United States</a> from 1861 until <a href=\"/wiki/Assassination_of_Abraham_Lincoln\" title=\"Assassination of Abraham Lincoln\">his assassination</a> in 1865. Lincoln led the nation through the <a href=\"/wiki/American_Civil_War\" title=\"American Civil War\">American Civil War</a>, the country's greatest moral, cultural, constitutional, and political crisis. He succeeded in preserving the <a href=\"/wiki/Union_(American_Civil_War)\" title=\"Union (American Civil War)\">Union</a>, <a href=\"/wiki/Abolitionism_in_the_United_States\" title=\"Abolitionism in the United States\">abolishing</a> <a href=\"/wiki/Slavery_in_the_United_States\" title=\"Slavery in the United States\">slavery</a>, bolstering the <a href=\"/wiki/Federal_government_of_the_United_States\" title=\"Federal government of the United States\">federal government</a>, and modernizing the <a href=\"/wiki/U.S._economy\" class=\"mw-redirect\" title=\"U.S. economy\">U.S. economy</a>.\n</p><p>Lincoln was born into poverty in a log cabin and was raised on the <a href=\"/wiki/American_frontier\" title=\"American frontier\">frontier</a> primarily in <a href=\"/wiki/Indiana\" title=\"Indiana\">Indiana</a>. He was self-educated and became a lawyer, <a href=\"/wiki/Whig_Party_(United_States)\" title=\"Whig Party (United States)\">Whig Party</a> leader, <a href=\"/wiki/Illinois\" title=\"Illinois\">Illinois</a> state <a href=\"/wiki/Illinois_House_of_Representatives\" title=\"Illinois House of Representatives\">legislator</a>, and U.S. Congressman <a href=\"/wiki/List_of_United_States_Representatives_from_Illinois\" class=\"mw-redirect\" title=\"List of United States Representatives from Illinois\">from Illinois</a>. In 1849, he returned to his law practice but became vexed by the opening of additional lands to slavery as a result of the <a href=\"/wiki/Kansas%E2%80%93Nebraska_Act\" title=\"Kansas–Nebraska Act\">Kansas–Nebraska Act</a>. He reentered politics in 1854, becoming a leader in the new <a href=\"/wiki/Republican_Party_(United_States)\" title=\"Republican Party (United States)\">Republican Party</a>, and he reached a national audience in the <a href=\"/wiki/Lincoln%E2%80%93Douglas_debates\" title=\"Lincoln–Douglas debates\">1858 debates</a> against <a href=\"/wiki/Stephen_Douglas\" class=\"mw-redirect\" title=\"Stephen Douglas\">Stephen Douglas</a>. Lincoln ran for President <a href=\"/wiki/1860_United_States_presidential_election\" title=\"1860 United States presidential election\">in 1860</a>, sweeping the <a href=\"/wiki/Northern_United_States\" title=\"Northern United States\">North</a> in victory. Pro-slavery elements in the <a href=\"/wiki/Southern_United_States\" title=\"Southern United States\">South</a> equated his success with the North's rejection of their right to practice slavery, and southern states began <a href=\"/wiki/Secession\" title=\"Secession\">seceding from the Union</a>. To secure its independence, the new <a href=\"/wiki/Confederate_States\" class=\"mw-redirect\" title=\"Confederate States\">Confederate States</a> <a href=\"/wiki/Battle_of_Fort_Sumter\" title=\"Battle of Fort Sumter\">fired on Fort Sumter</a>, a U.S. fort in the South, and Lincoln called up forces to suppress the rebellion and restore the Union.\n</p><p>Lincoln, a moderate Republican, had to navigate a contentious array of factions with friends and opponents from both the <a href=\"/wiki/Democratic_Party_(United_States)\" title=\"Democratic Party (United States)\">Democratic</a> and Republican parties. His allies, the <a href=\"/wiki/War_Democrat\" title=\"War Democrat\">War Democrats</a> and the <a href=\"/wiki/Radical_Republicans\" title=\"Radical Republicans\">Radical Republicans</a>, demanded harsh treatment of the Southern Confederates. Anti-war Democrats (called \"<a href=\"/wiki/Copperhead_(politics)\" title=\"Copperhead (politics)\">Copperheads</a>\") despised Lincoln, and irreconcilable pro-Confederate elements plotted his assassination. He managed the factions by exploiting their mutual enmity, by carefully distributing political patronage, and by appealing to the American people. His <a href=\"/wiki/Gettysburg_Address\" title=\"Gettysburg Address\">Gettysburg Address</a> appealed to <a href=\"/wiki/Nationalistic\" class=\"mw-redirect\" title=\"Nationalistic\">nationalistic</a>, <a href=\"/wiki/Republicanism\" title=\"Republicanism\">republican</a>, <a href=\"/wiki/Egalitarian\" class=\"mw-redirect\" title=\"Egalitarian\">egalitarian</a>, <a href=\"/wiki/Libertarian\" class=\"mw-redirect\" title=\"Libertarian\">libertarian</a>, and <a href=\"/wiki/Democracy\" title=\"Democracy\">democratic</a> sentiments. Lincoln scrutinized the strategy and tactics in the war effort, including the selection of generals and the <a href=\"/wiki/Union_blockade\" title=\"Union blockade\">naval blockade</a> of the South's trade. He suspended <i><a href=\"/wiki/Habeas_corpus\" title=\"Habeas corpus\">habeas corpus</a></i> in <a href=\"/wiki/Maryland\" title=\"Maryland\">Maryland</a>, and he averted British intervention by defusing the <a href=\"/wiki/Trent_Affair\" title=\"Trent Affair\"><i>Trent</i> Affair</a>. He engineered the end to slavery with his <a href=\"/wiki/Emancipation_Proclamation\" title=\"Emancipation Proclamation\">Emancipation Proclamation</a>, including his order that the Army and Navy liberate, protect, and recruit former slaves. He also encouraged <a href=\"/wiki/Border_states_(American_Civil_War)\" title=\"Border states (American Civil War)\">border states</a> to outlaw slavery, and promoted the <a href=\"/wiki/Thirteenth_Amendment_to_the_United_States_Constitution\" title=\"Thirteenth Amendment to the United States Constitution\">Thirteenth Amendment to the United States Constitution</a>, which outlawed slavery across the country.\n</p><p>Lincoln managed his own successful <a href=\"/wiki/1864_United_States_presidential_election\" title=\"1864 United States presidential election\">re-election campaign</a>. He sought to heal the war-torn nation through reconciliation. On April 14, 1865, just days after the war's end at <a href=\"/wiki/Battle_of_Appomattox_Court_House\" title=\"Battle of Appomattox Court House\">Appomattox</a>, he was attending a play at <a href=\"/wiki/Ford%27s_Theatre\" title=\"Ford&#39;s Theatre\">Ford's Theatre</a> in <a href=\"/wiki/Washington,_D.C.\" title=\"Washington, D.C.\">Washington, D.C.</a>, with his wife <a href=\"/wiki/Mary_Todd_Lincoln\" title=\"Mary Todd Lincoln\">Mary</a> when he was fatally shot by Confederate sympathizer <a href=\"/wiki/John_Wilkes_Booth\" title=\"John Wilkes Booth\">John Wilkes Booth</a>. Lincoln is remembered as a <a href=\"/wiki/Martyr\" title=\"Martyr\">martyr</a> and hero of the United States and is consistently <a href=\"/wiki/Historical_rankings_of_presidents_of_the_United_States#Scholar_survey_results\" title=\"Historical rankings of presidents of the United States\">ranked</a> as one of the greatest presidents in American history.\n</p>\n<style data-mw-deduplicate=\"TemplateStyles:r886046785\">.mw-parser-output .toclimit-2 .toclevel-1 ul,.mw-parser-output .toclimit-3 .toclevel-2 ul,.mw-parser-output .toclimit-4 .toclevel-3 ul,.mw-parser-output .toclimit-5 .toclevel-4 ul,.mw-parser-output .toclimit-6 .toclevel-5 ul,.mw-parser-output .toclimit-7 .toclevel-6 ul{display:none}</style><div class=\"toclimit-3\"></div>\n<div class=\"mw-references-wrap\"><ol class=\"references\">\n<li id=\"cite_note-LincolnHeight-1\"><span class=\"mw-cite-backlink\"><b><a href=\"#cite_ref-LincolnHeight_1-0\">^</a></b></span> <span class=\"reference-text\"><style data-mw-deduplicate=\"TemplateStyles:r999302996\">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:\"\\\"\"\"\\\"\"\"'\"\"'\"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg\")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg\")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg\")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg\")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id=\"CITEREFCarpenter1866\" class=\"citation book cs1\">Carpenter, Francis B. (1866). <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/sixmonthsatwhit02carpgoog\"><i>Six Months in the White House: The Story of a Picture</i></a>. Hurd and Houghton. p.&#160;<a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/sixmonthsatwhit02carpgoog/page/n225\">217</a>.</cite><span title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Six+Months+in+the+White+House%3A+The+Story+of+a+Picture&amp;rft.pages=217&amp;rft.pub=Hurd+and+Houghton.&amp;rft.date=1866&amp;rft.aulast=Carpenter&amp;rft.aufirst=Francis+B.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fsixmonthsatwhit02carpgoog&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAbraham+Lincoln\" class=\"Z3988\"></span></span>\n</li>\n</ol></div>\n<p><br /><span class=\"error mw-ext-cite-error\" lang=\"en\" dir=\"ltr\">Cite error: There are <code>&lt;ref&#160;group&#61;lower-alpha&gt;</code> tags&#160;or <code>&#123;&#123;efn&#125;&#125;</code> templates on this page, but the references will not show without a <code>&#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125;</code> template&#160;or <code>&#123;&#123;notelist&#125;&#125;</code> template (see the <a href=\"/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\" title=\"Help:Cite errors/Cite error group refs without references\">help page</a>).\n</span>\n</p>\n<!-- \nNewPP limit report\nParsed by mw2374\nCached time: 20210718224544\nCache expiry: 86400\nReduced expiry: true\nComplications: [vary‐revision‐sha1]\nCPU time usage: 1.034 seconds\nReal time usage: 1.291 seconds\nPreprocessor visited node count: 9583/1000000\nPost‐expand include size: 62284/2097152 bytes\nTemplate argument size: 17614/2097152 bytes\nHighest expansion depth: 20/40\nExpensive parser function count: 5/500\nUnstrip recursion depth: 0/20\nUnstrip post‐expand size: 7382/5000000 bytes\nLua time usage: 0.497/10.000 seconds\nLua memory usage: 7844204/52428800 bytes\nNumber of Wikibase entities loaded: 0/400\n-->\n<!--\nTransclusion expansion time report (%,ms,calls,template)\n100.00% 1248.722      1 -total\n 48.03%  599.726      1 Template:Infobox_officeholder\n 15.26%  190.542     17 Template:Infobox_officeholder/office\n 10.60%  132.421      1 Template:Abraham_Lincoln_series\n 10.28%  128.341      1 Template:Sidebar_person/US_President\n  9.98%  124.678      1 Template:Sidebar_person\n  9.60%  119.845      1 Template:Sidebar\n  9.52%  118.921      1 Template:Birth_date\n  8.79%  109.704      1 Template:Cite_book\n  6.51%   81.340      1 Template:Short_description\n-->\n</div>"
+},
+"links": [
+{
+"ns": 0,
+"exists": "",
+"*": "Abe Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "1860 Republican National Convention"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "1860 United States presidential election"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "1864 National Union National Convention"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "1864 United States presidential election"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abe Lincoln (musician)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abolitionism in the United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abraham Lincoln's farewell address"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abraham Lincoln's first inaugural address"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abraham Lincoln's second inaugural address"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abraham Lincoln (disambiguation)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Abraham Lincoln and slavery"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Alexander Gardner (photographer)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "American Civil War"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "American Indian Wars"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "American frontier"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Andrew Johnson"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Assassination of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Battle of Appomattox Court House"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Battle of Fort Sumter"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Battle of Kellogg's Grove"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Battle of Stillman's Run"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Bibliography of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Black Hawk War"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Border states (American Civil War)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Captain (United States O-3)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Confederate States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Cooper Union speech"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Copperhead (politics)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Cultural depictions of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Democracy"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Democratic Party (United States)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Early life and career of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Edward Baker Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Egalitarian"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Electoral history of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Emancipation Proclamation"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Federal government of the United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "First inauguration of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Ford's Theatre"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Funeral and burial of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Gettysburg Address"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Gunshot wound"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Habeas corpus"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Hannibal Hamlin"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Health of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Historical rankings of presidents of the United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Illinois"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Illinois's 7th congressional district"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Illinois House of Representatives"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Illinois Militia"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Indiana"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "James Buchanan"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "John Henry (representative)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "John Wilkes Booth"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Kansas–Nebraska Act"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Kentucky"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Libertarian"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Lincoln Tomb"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Lincoln family"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Lincoln–Douglas debates"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "List of United States Representatives from Illinois"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Martyr"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Mary Todd Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Maryland"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Memorials to Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Nancy Hanks Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "National Union Party (United States)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Nationalistic"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Northern United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Outline of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Political career of Abraham Lincoln (1849–1861)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Presidency of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "President of the United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Presidential transition of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Private (United States)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Radical Republicans"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Reconstruction era"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Religious views of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Republican Party (United States)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Republicanism"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Robert Todd Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Sangamon County"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Secession"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Second inauguration of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Sexuality of Abraham Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Sinking Spring Farm"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Slavery in the United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Southern United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Stephen Douglas"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Tad Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Ten percent plan"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Thirteenth Amendment to the United States Constitution"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Thomas L. Harris"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Thomas Lincoln"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Trent Affair"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "U.S. economy"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Union (American Civil War)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Union blockade"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "United States House of Representatives"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Vice President of the United States"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "War Democrat"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Washington, D.C."
+},
+{
+"ns": 0,
+"exists": "",
+"*": "Whig Party (United States)"
+},
+{
+"ns": 0,
+"exists": "",
+"*": "William Wallace Lincoln"
+},
+{
+"ns": 4,
+"exists": "",
+"*": "Wikipedia:Protection policy"
+},
+{
+"ns": 4,
+"exists": "",
+"*": "Wikipedia:Good articles"
+},
+{
+"ns": 14,
+"exists": "",
+"*": "Category:Use American English from July 2020"
+},
+{
+"ns": 14,
+"exists": "",
+"*": "Category:Use mdy dates from November 2020"
+},
+{
+"ns": 10,
+"exists": "",
+"*": "Template:Abraham Lincoln series"
+},
+{
+"ns": 11,
+"exists": "",
+"*": "Template talk:Abraham Lincoln series"
+},
+{
+"ns": 12,
+"exists": "",
+"*": "Help:Cite errors/Cite error group refs without references"
+},
+{
+"ns": 12,
+"exists": "",
+"*": "Help:IPA/English"
+}
+]
+}
+}
+
+https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Abraham%20Lincoln&section=0&prop=images|text
+{
+"parse": {
+"title": "Abraham Lincoln",
+"pageid": 307,
+"text": {
+"*": "<div class=\"mw-parser-output\"><div class=\"shortdescription nomobile noexcerpt noprint searchaux\" style=\"display:none\">16th President of the United States (1861–65)</div>\n<style data-mw-deduplicate=\"TemplateStyles:r1033289096\">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role=\"note\" class=\"hatnote navigation-not-searchable\">This article is about the 16th president of the United States. For other uses, see <a href=\"/wiki/Abraham_Lincoln_(disambiguation)\" class=\"mw-disambig\" title=\"Abraham Lincoln (disambiguation)\">Abraham Lincoln (disambiguation)</a>.</div>\n<link rel=\"mw-deduplicated-inline-style\" href=\"mw-data:TemplateStyles:r1033289096\"/><div role=\"note\" class=\"hatnote navigation-not-searchable\">\"Abe Lincoln\" redirects here. For the jazz musician, see <a href=\"/wiki/Abe_Lincoln_(musician)\" title=\"Abe Lincoln (musician)\">Abe Lincoln (musician)</a>.</div>\n<p class=\"mw-empty-elt\">\n\n\n\n</p>\n<table class=\"infobox vcard\"><tbody><tr><th colspan=\"2\" class=\"infobox-above\" style=\"font-size: 100%;\"><div style=\"display:inline-block; font-size:125%;\" class=\"fn\">Abraham Lincoln</div></th></tr><tr><td colspan=\"2\" class=\"infobox-image\"><a href=\"/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg\" class=\"image\" title=\"An iconic photograph of a bearded Abraham Lincoln showing his head and shoulders.\"><img alt=\"An iconic photograph of a bearded Abraham Lincoln showing his head and shoulders.\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/220px-Abraham_Lincoln_O-77_matte_collodion_print.jpg\" decoding=\"async\" width=\"220\" height=\"284\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/330px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 2x\" data-file-width=\"2200\" data-file-height=\"2835\" /></a><div class=\"infobox-caption\" style=\"line-height:normal;padding-top:0.2em;\">Portrait by <a href=\"/wiki/Alexander_Gardner_(photographer)\" title=\"Alexander Gardner (photographer)\">Alexander Gardner</a>, November 1863</div></td></tr><tr><td colspan=\"2\" class=\"infobox-full-data\"></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender;line-height:normal;padding:0.2em 0.2em\">16th&#32;<a href=\"/wiki/President_of_the_United_States\" title=\"President of the United States\">President of the United States</a></th></tr><tr><td colspan=\"2\" class=\"infobox-full-data\" style=\"border-bottom:none\"><span class=\"nowrap\"><b>In office</b></span><br />March 4, 1861&#160;–&#32;April 15, 1865</td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\"><a href=\"/wiki/Vice_President_of_the_United_States\" title=\"Vice President of the United States\">Vice President</a></span></th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li><a href=\"/wiki/Hannibal_Hamlin\" title=\"Hannibal Hamlin\">Hannibal Hamlin</a> (1861–1865)</li>\n<li>Andrew Johnson (Mar–Apr 1865)</li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Preceded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/James_Buchanan\" title=\"James Buchanan\">James Buchanan</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Succeeded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/Andrew_Johnson\" title=\"Andrew Johnson\">Andrew Johnson</a></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender;line-height:normal;padding:0.2em 0.2em\">Member of the <span style=\"display: inline-block;\"><a href=\"/wiki/United_States_House_of_Representatives\" title=\"United States House of Representatives\">U.S.&#32;House&#32;of&#32;Representatives</a></span><br />from <a href=\"/wiki/Illinois\" title=\"Illinois\">Illinois</a>'s <span data-sort-value=\"Illinois07&#160;!\"><a href=\"/wiki/Illinois%27s_7th_congressional_district\" title=\"Illinois&#39;s 7th congressional district\">7th</a></span> district</th></tr><tr><td colspan=\"2\" class=\"infobox-full-data\" style=\"border-bottom:none\"><span class=\"nowrap\"><b>In office</b></span><br />March 4, 1847&#160;–&#32;March 3, 1849</td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Preceded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/John_Henry_(representative)\" title=\"John Henry (representative)\">John Henry</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\" style=\"text-align:left\"><span class=\"nowrap\">Succeeded by</span></th><td class=\"infobox-data\"><a href=\"/wiki/Thomas_L._Harris\" title=\"Thomas L. Harris\">Thomas L. Harris</a></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender;line-height:normal;padding:0.2em 0.2em\">Member of the<br /><a href=\"/wiki/Illinois_House_of_Representatives\" title=\"Illinois House of Representatives\">Illinois House of Representatives</a><br />from <a href=\"/wiki/Sangamon_County\" class=\"mw-redirect\" title=\"Sangamon County\">Sangamon County</a></th></tr><tr><td colspan=\"2\" class=\"infobox-full-data\" style=\"border-bottom:none\"><span class=\"nowrap\"><b>In office</b></span><br />December 1, 1834&#160;–&#32;December 4, 1842</td></tr><tr style=\"display:none\"><td colspan=\"2\">\n</td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender\">Personal details</th></tr><tr><th scope=\"row\" class=\"infobox-label\">Born</th><td class=\"infobox-data\"><span style=\"display:none\">(<span class=\"bday\">1809-02-12</span>)</span>February 12, 1809<br /><a href=\"/wiki/Sinking_Spring_Farm\" class=\"mw-redirect\" title=\"Sinking Spring Farm\">Sinking Spring Farm</a>, <a href=\"/wiki/Kentucky\" title=\"Kentucky\">Kentucky</a>, U.S.</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Died</th><td class=\"infobox-data\">April 15, 1865<span style=\"display:none\">(1865-04-15)</span> (aged&#160;56)<br /><a href=\"/wiki/Washington,_D.C.\" title=\"Washington, D.C.\">Washington, D.C.</a>, U.S.</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Cause&#160;of&#160;death</th><td class=\"infobox-data\"><a href=\"/wiki/Assassination_of_Abraham_Lincoln\" title=\"Assassination of Abraham Lincoln\">Assassination</a><br />(<a href=\"/wiki/Gunshot_wound\" title=\"Gunshot wound\">gunshot wound</a> to the head)</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Resting place</th><td class=\"infobox-data label\"><a href=\"/wiki/Lincoln_Tomb\" title=\"Lincoln Tomb\">Lincoln Tomb</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Political party</th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li><a href=\"/wiki/Whig_Party_(United_States)\" title=\"Whig Party (United States)\">Whig</a> (before 1854)</li>\n<li><a href=\"/wiki/Republican_Party_(United_States)\" title=\"Republican Party (United States)\">Republican</a> (1854–1864)</li>\n<li><a href=\"/wiki/National_Union_Party_(United_States)\" title=\"National Union Party (United States)\">National Union</a> (1864–1865)</li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Height</th><td class=\"infobox-data\">6&#160;ft 4&#160;in (193&#160;cm)<sup id=\"cite_ref-LincolnHeight_1-0\" class=\"reference\"><a href=\"#cite_note-LincolnHeight-1\">&#91;1&#93;</a></sup></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Spouse(s)</th><td class=\"infobox-data\"><div style=\"display:inline;white-space:nowrap;\"><div style=\"display:inline-block;line-height:normal;\"><a href=\"/wiki/Mary_Todd_Lincoln\" title=\"Mary Todd Lincoln\">Mary Todd</a></div>&#32;<div style=\"display:inline-block;\">&#8203;</div>&#40;<abbr title=\"married\">m.</abbr>&#160;<span title=\"November 4, 1842\" class=\"rt-commentedText\">1842</span>&#41;<wbr />&#8203;</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Children</th><td class=\"infobox-data\"><div class=\"hlist hlist-separated\"><ul><li><a href=\"/wiki/Robert_Todd_Lincoln\" title=\"Robert Todd Lincoln\">Robert</a></li><li><a href=\"/wiki/Edward_Baker_Lincoln\" title=\"Edward Baker Lincoln\">Edward</a></li><li><a href=\"/wiki/William_Wallace_Lincoln\" title=\"William Wallace Lincoln\">Willie</a></li><li><a href=\"/wiki/Tad_Lincoln\" title=\"Tad Lincoln\">Tad</a></li></ul></div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Mother</th><td class=\"infobox-data\"><a href=\"/wiki/Nancy_Hanks_Lincoln\" class=\"mw-redirect\" title=\"Nancy Hanks Lincoln\">Nancy Hanks</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Father</th><td class=\"infobox-data\"><a href=\"/wiki/Thomas_Lincoln\" title=\"Thomas Lincoln\">Thomas Lincoln</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Relatives</th><td class=\"infobox-data\"><a href=\"/wiki/Lincoln_family\" title=\"Lincoln family\">Lincoln family</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Occupation</th><td class=\"infobox-data\"><div class=\"hlist hlist-separated\"><ul><li>Politician</li><li>lawyer</li></ul></div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Signature</th><td class=\"infobox-data\"><a href=\"/wiki/File:Abraham_Lincoln_1862_signature.svg\" class=\"image\" title=\"Abraham Lincoln&#39;s signature\"><img alt=\"Cursive signature in ink\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Abraham_Lincoln_1862_signature.svg/128px-Abraham_Lincoln_1862_signature.svg.png\" decoding=\"async\" width=\"128\" height=\"21\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Abraham_Lincoln_1862_signature.svg/192px-Abraham_Lincoln_1862_signature.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Abraham_Lincoln_1862_signature.svg/256px-Abraham_Lincoln_1862_signature.svg.png 2x\" data-file-width=\"585\" data-file-height=\"95\" /></a></td></tr><tr><th colspan=\"2\" class=\"infobox-header\" style=\"background:lavender\">Military service</th></tr><tr><th scope=\"row\" class=\"infobox-label\">Allegiance</th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li>United States</li>\n<li><a href=\"/wiki/Illinois\" title=\"Illinois\">Illinois</a></li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Branch/service</th><td class=\"infobox-data\"><a href=\"/wiki/Illinois_Militia\" class=\"mw-redirect\" title=\"Illinois Militia\">Illinois Militia</a></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Years&#160;of service</th><td class=\"infobox-data\">1832</td></tr><tr><th scope=\"row\" class=\"infobox-label\">Rank</th><td class=\"infobox-data\"><div class=\"plainlist\">\n<ul><li><a href=\"/wiki/Captain_(United_States_O-3)\" title=\"Captain (United States O-3)\">Captain</a><sup id=\"cite_ref-Ranks_2-0\" class=\"reference\"><a href=\"#cite_note-Ranks-2\">&#91;a&#93;</a></sup></li>\n<li><a href=\"/wiki/Private_(United_States)\" class=\"mw-redirect\" title=\"Private (United States)\">Private</a><sup id=\"cite_ref-Ranks_2-1\" class=\"reference\"><a href=\"#cite_note-Ranks-2\">&#91;a&#93;</a></sup></li></ul>\n</div></td></tr><tr><th scope=\"row\" class=\"infobox-label\">Battles/wars</th><td class=\"infobox-data\"><style data-mw-deduplicate=\"TemplateStyles:r886050385\">.mw-parser-output .treeview ul{padding:0;margin:0}.mw-parser-output .treeview li{padding:0;margin:0;list-style-type:none;list-style-image:none}.mw-parser-output .treeview li li{background:url(\"//upload.wikimedia.org/wikipedia/commons/f/f2/Treeview-grey-line.png\")no-repeat 0 -2981px;padding-left:21px;text-indent:0.3em}.mw-parser-output .treeview li li:last-child{background-position:0 -5971px}.mw-parser-output .treeview li.emptyline>ul>.mw-empty-elt:first-child+.emptyline,.mw-parser-output .treeview li.emptyline>ul>li:first-child{background-position:0 9px}</style><div class=\"treeview\">\n<ul><li><a href=\"/wiki/American_Indian_Wars\" title=\"American Indian Wars\">American Indian Wars</a>\n<ul><li><a href=\"/wiki/Black_Hawk_War\" title=\"Black Hawk War\">Black Hawk War</a>\n<ul><li><a href=\"/wiki/Battle_of_Kellogg%27s_Grove\" title=\"Battle of Kellogg&#39;s Grove\">Battle of Kellogg's Grove</a></li>\n<li><a href=\"/wiki/Battle_of_Stillman%27s_Run\" title=\"Battle of Stillman&#39;s Run\">Battle of Stillman's Run</a></li></ul></li></ul></li></ul>\n</div></td></tr></tbody></table>\n<style data-mw-deduplicate=\"TemplateStyles:r1013635363\">.mw-parser-output .sidebar{width:22em;float:right;clear:right;margin:0.5em 0 1em 1em;background:#f8f9fa;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;display:table}body.skin-minerva .mw-parser-output .sidebar{display:table!important;float:right!important;margin:0.5em 0 1em 1em!important}.mw-parser-output .sidebar a{white-space:nowrap}.mw-parser-output .sidebar-wraplinks a{white-space:normal}.mw-parser-output .sidebar-subgroup{width:100%;margin:0;border-spacing:0}.mw-parser-output .sidebar-left{float:left;clear:left;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-none{float:none;clear:both;margin:0.5em 1em 1em 0}.mw-parser-output .sidebar-outer-title{padding-bottom:0.2em;font-size:125%;line-height:1.2em;font-weight:bold}.mw-parser-output .sidebar-top-image{padding:0.4em 0}.mw-parser-output .sidebar-top-caption,.mw-parser-output .sidebar-pretitle-with-top-image,.mw-parser-output .sidebar-caption{padding-top:0.2em;line-height:1.2em}.mw-parser-output .sidebar-pretitle{padding-top:0.4em;line-height:1.2em}.mw-parser-output .sidebar-title,.mw-parser-output .sidebar-title-with-pretitle{padding:0.2em 0.4em;font-size:145%;line-height:1.2em}.mw-parser-output .sidebar-title-with-pretitle{padding-top:0}.mw-parser-output .sidebar-image{padding:0.2em 0 0.4em}.mw-parser-output .sidebar-heading{padding:0.1em}.mw-parser-output .sidebar-content{padding:0 0.1em 0.4em}.mw-parser-output .sidebar-content-with-subgroup{padding:0.1em 0 0.2em}.mw-parser-output .sidebar-above,.mw-parser-output .sidebar-below{padding:0.3em 0.4em;font-weight:bold}.mw-parser-output .sidebar-collapse .sidebar-above,.mw-parser-output .sidebar-collapse .sidebar-below{border-top:1px solid #aaa;border-bottom:1px solid #aaa}.mw-parser-output .sidebar-navbar{text-align:right;font-size:115%}.mw-parser-output .sidebar-collapse .sidebar-navbar{padding-top:0.6em}.mw-parser-output .sidebar-list-title{text-align:left;font-weight:bold;line-height:1.6em;font-size:105%}.mw-parser-output .sidebar-list-title-c{text-align:center;margin:0 3.3em}@media(max-width:720px){body.mediawiki .mw-parser-output .sidebar{width:100%!important;clear:both;float:none!important;margin-left:0!important;margin-right:0!important}}</style><table class=\"sidebar nomobile sidebar-wraplinks vcard hlist\" style=\"border: 4px double #d69d36\"><tbody><tr><th class=\"sidebar-title\" style=\"font-size: 110%; padding: 0; line-height: 150%;\"><table><tbody><tr>\n<td style=\"background: #002466; vertical-align:middle; padding:5px;\"><a href=\"/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg\" class=\"image\"><img alt=\"Abraham Lincoln O-77 matte collodion print.jpg\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/75px-Abraham_Lincoln_O-77_matte_collodion_print.jpg\" decoding=\"async\" width=\"75\" height=\"97\" class=\"thumbborder\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/113px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/150px-Abraham_Lincoln_O-77_matte_collodion_print.jpg 2x\" data-file-width=\"2200\" data-file-height=\"2835\" /></a></td>\n<td style=\"background: #002466; vertical-align:middle; padding:6px; width:100%;\"><div style=\"font-size:88%; line-height:normal;\"><span style=\"color: #FFF\">This article is part of <br />a series about</span></div><span class=\"vcard\"><span class=\"fn\"><a class=\"mw-selflink selflink\"><span style=\"color: #FFF\">Abraham Lincoln</span></a></span></span></td>\n</tr></tbody></table></th></tr><tr><td class=\"sidebar-content\" style=\"padding:0.3em;\">\n<div style=\"font-weight: bold;line-height:normal;\">Personal</div>\n<ul><li><a href=\"/wiki/Early_life_and_career_of_Abraham_Lincoln\" title=\"Early life and career of Abraham Lincoln\">Early life and career</a></li>\n<li><a href=\"/wiki/Lincoln_family\" title=\"Lincoln family\">Family</a></li>\n<li><a href=\"/wiki/Health_of_Abraham_Lincoln\" title=\"Health of Abraham Lincoln\">Health</a></li>\n<li><a href=\"/wiki/Sexuality_of_Abraham_Lincoln\" title=\"Sexuality of Abraham Lincoln\">Sexuality</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Political</div>\n<ul><li><a href=\"/wiki/Political_career_of_Abraham_Lincoln_(1849%E2%80%931861)\" title=\"Political career of Abraham Lincoln (1849–1861)\">Political career, 1849–1861</a></li>\n<li><a href=\"/wiki/Lincoln%E2%80%93Douglas_debates\" title=\"Lincoln–Douglas debates\">Lincoln–Douglas debates</a></li>\n<li><a href=\"/wiki/Cooper_Union_speech\" title=\"Cooper Union speech\">Cooper Union speech</a></li>\n<li><a href=\"/wiki/Abraham_Lincoln%27s_farewell_address\" title=\"Abraham Lincoln&#39;s farewell address\">Farewell address</a></li>\n<li><a href=\"/wiki/Abraham_Lincoln_and_slavery\" title=\"Abraham Lincoln and slavery\">Views on slavery</a></li>\n<li><a href=\"/wiki/Religious_views_of_Abraham_Lincoln\" title=\"Religious views of Abraham Lincoln\">Views on religion</a></li>\n<li><a href=\"/wiki/Electoral_history_of_Abraham_Lincoln\" title=\"Electoral history of Abraham Lincoln\">Electoral history</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">16th President of the United States</div>\n<ul><li><a href=\"/wiki/Presidency_of_Abraham_Lincoln\" title=\"Presidency of Abraham Lincoln\">Presidency</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">First term</div>\n<ul><li><a href=\"/wiki/Presidential_transition_of_Abraham_Lincoln\" title=\"Presidential transition of Abraham Lincoln\">Transition</a></li>\n<li><a href=\"/wiki/First_inauguration_of_Abraham_Lincoln\" title=\"First inauguration of Abraham Lincoln\">1st inauguration</a>\n<ul><li><a href=\"/wiki/Abraham_Lincoln%27s_first_inaugural_address\" title=\"Abraham Lincoln&#39;s first inaugural address\">Address</a></li></ul></li>\n<li><a href=\"/wiki/Hannibal_Hamlin\" title=\"Hannibal Hamlin\">Hannibal Hamlin</a></li>\n<li><a href=\"/wiki/American_Civil_War\" title=\"American Civil War\">American Civil War</a>\n<ul><li><a href=\"/wiki/Union_(American_Civil_War)\" title=\"Union (American Civil War)\">The Union</a></li>\n<li><a href=\"/wiki/Emancipation_Proclamation\" title=\"Emancipation Proclamation\">Emancipation Proclamation</a></li>\n<li><a href=\"/wiki/Ten_percent_plan\" title=\"Ten percent plan\">Ten percent plan</a></li>\n<li><a href=\"/wiki/Gettysburg_Address\" title=\"Gettysburg Address\">Gettysburg Address</a></li>\n<li><a href=\"/wiki/Thirteenth_Amendment_to_the_United_States_Constitution\" title=\"Thirteenth Amendment to the United States Constitution\">13th Amendment</a></li></ul></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Second term</div>\n<ul><li><a href=\"/wiki/Second_inauguration_of_Abraham_Lincoln\" title=\"Second inauguration of Abraham Lincoln\">2nd inauguration</a>\n<ul><li><a href=\"/wiki/Abraham_Lincoln%27s_second_inaugural_address\" title=\"Abraham Lincoln&#39;s second inaugural address\">Address</a></li></ul></li>\n<li><a href=\"/wiki/Andrew_Johnson\" title=\"Andrew Johnson\">Andrew Johnson</a></li>\n<li><a href=\"/wiki/Reconstruction_era\" title=\"Reconstruction era\">Reconstruction</a></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Presidential elections</div>\n<ul><li><a href=\"/wiki/1860_United_States_presidential_election\" title=\"1860 United States presidential election\">1860</a>\n<ul><li><a href=\"/wiki/1860_Republican_National_Convention\" title=\"1860 Republican National Convention\">Convention</a></li></ul></li></ul>\n<ul><li><a href=\"/wiki/1864_United_States_presidential_election\" title=\"1864 United States presidential election\">1864</a>\n<ul><li><a href=\"/wiki/1864_National_Union_National_Convention\" title=\"1864 National Union National Convention\">Convention</a></li></ul></li></ul>\n<hr />\n<div style=\"font-weight: bold;line-height:normal;\">Assassination and legacy</div>\n<ul><li><a href=\"/wiki/Assassination_of_Abraham_Lincoln\" title=\"Assassination of Abraham Lincoln\">Assassination</a></li>\n<li><a href=\"/wiki/Funeral_and_burial_of_Abraham_Lincoln\" title=\"Funeral and burial of Abraham Lincoln\">Funeral</a></li></ul>\n<ul><li><a href=\"/wiki/Abraham_Lincoln#Historical_reputation\" title=\"Abraham Lincoln\">Historical reputation</a></li>\n<li><a href=\"/wiki/Memorials_to_Abraham_Lincoln\" title=\"Memorials to Abraham Lincoln\">Memorials</a></li>\n<li><a href=\"/wiki/Cultural_depictions_of_Abraham_Lincoln\" title=\"Cultural depictions of Abraham Lincoln\">Depictions</a></li></ul>\n<ul><li><a href=\"/wiki/Bibliography_of_Abraham_Lincoln\" title=\"Bibliography of Abraham Lincoln\">Bibliography</a></li></ul>\n<ul><li><a href=\"/wiki/Outline_of_Abraham_Lincoln\" title=\"Outline of Abraham Lincoln\">Topical guide</a></li></ul>\n<hr />\n<img alt=\"\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/70px-Seal_of_the_President_of_the_United_States.svg.png\" decoding=\"async\" width=\"70\" height=\"70\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/105px-Seal_of_the_President_of_the_United_States.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Seal_of_the_President_of_the_United_States.svg/140px-Seal_of_the_President_of_the_United_States.svg.png 2x\" data-file-width=\"2424\" data-file-height=\"2425\" /></td>\n</tr><tr><td class=\"sidebar-navbar\" style=\"text-align:center;\"><style data-mw-deduplicate=\"TemplateStyles:r992953826\">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:\"[ \"}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:\" ]\"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}.mw-parser-output .infobox .navbar{font-size:100%}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style><div class=\"navbar plainlinks hlist navbar-mini\"><ul><li class=\"nv-view\"><a href=\"/wiki/Template:Abraham_Lincoln_series\" title=\"Template:Abraham Lincoln series\"><abbr title=\"View this template\">v</abbr></a></li><li class=\"nv-talk\"><a href=\"/wiki/Template_talk:Abraham_Lincoln_series\" title=\"Template talk:Abraham Lincoln series\"><abbr title=\"Discuss this template\">t</abbr></a></li><li class=\"nv-edit\"><a class=\"external text\" href=\"https://en.wikipedia.org/w/index.php?title=Template:Abraham_Lincoln_series&amp;action=edit\"><abbr title=\"Edit this template\">e</abbr></a></li></ul></div></td></tr></tbody></table>\n<p><b>Abraham Lincoln</b> (<span class=\"rt-commentedText nowrap\"><span class=\"IPA nopopups noexcerpt\"><a href=\"/wiki/Help:IPA/English\" title=\"Help:IPA/English\">/<span style=\"border-bottom:1px dotted\"><span title=\"/ˈ/: primary stress follows\">ˈ</span><span title=\"&#39;l&#39; in &#39;lie&#39;\">l</span><span title=\"/ɪ/: &#39;i&#39; in &#39;kit&#39;\">ɪ</span><span title=\"/ŋ/: &#39;ng&#39; in &#39;sing&#39;\">ŋ</span><span title=\"&#39;k&#39; in &#39;kind&#39;\">k</span><span title=\"/ən/: &#39;on&#39; in &#39;button&#39;\">ən</span></span>/</a></span></span>; February 12, 1809 – April 15, 1865) was an American lawyer and statesman who served as the 16th <a href=\"/wiki/President_of_the_United_States\" title=\"President of the United States\">president of the United States</a> from 1861 until <a href=\"/wiki/Assassination_of_Abraham_Lincoln\" title=\"Assassination of Abraham Lincoln\">his assassination</a> in 1865. Lincoln led the nation through the <a href=\"/wiki/American_Civil_War\" title=\"American Civil War\">American Civil War</a>, the country's greatest moral, cultural, constitutional, and political crisis. He succeeded in preserving the <a href=\"/wiki/Union_(American_Civil_War)\" title=\"Union (American Civil War)\">Union</a>, <a href=\"/wiki/Abolitionism_in_the_United_States\" title=\"Abolitionism in the United States\">abolishing</a> <a href=\"/wiki/Slavery_in_the_United_States\" title=\"Slavery in the United States\">slavery</a>, bolstering the <a href=\"/wiki/Federal_government_of_the_United_States\" title=\"Federal government of the United States\">federal government</a>, and modernizing the <a href=\"/wiki/U.S._economy\" class=\"mw-redirect\" title=\"U.S. economy\">U.S. economy</a>.\n</p><p>Lincoln was born into poverty in a log cabin and was raised on the <a href=\"/wiki/American_frontier\" title=\"American frontier\">frontier</a> primarily in <a href=\"/wiki/Indiana\" title=\"Indiana\">Indiana</a>. He was self-educated and became a lawyer, <a href=\"/wiki/Whig_Party_(United_States)\" title=\"Whig Party (United States)\">Whig Party</a> leader, <a href=\"/wiki/Illinois\" title=\"Illinois\">Illinois</a> state <a href=\"/wiki/Illinois_House_of_Representatives\" title=\"Illinois House of Representatives\">legislator</a>, and U.S. Congressman <a href=\"/wiki/List_of_United_States_Representatives_from_Illinois\" class=\"mw-redirect\" title=\"List of United States Representatives from Illinois\">from Illinois</a>. In 1849, he returned to his law practice but became vexed by the opening of additional lands to slavery as a result of the <a href=\"/wiki/Kansas%E2%80%93Nebraska_Act\" title=\"Kansas–Nebraska Act\">Kansas–Nebraska Act</a>. He reentered politics in 1854, becoming a leader in the new <a href=\"/wiki/Republican_Party_(United_States)\" title=\"Republican Party (United States)\">Republican Party</a>, and he reached a national audience in the <a href=\"/wiki/Lincoln%E2%80%93Douglas_debates\" title=\"Lincoln–Douglas debates\">1858 debates</a> against <a href=\"/wiki/Stephen_Douglas\" class=\"mw-redirect\" title=\"Stephen Douglas\">Stephen Douglas</a>. Lincoln ran for President <a href=\"/wiki/1860_United_States_presidential_election\" title=\"1860 United States presidential election\">in 1860</a>, sweeping the <a href=\"/wiki/Northern_United_States\" title=\"Northern United States\">North</a> in victory. Pro-slavery elements in the <a href=\"/wiki/Southern_United_States\" title=\"Southern United States\">South</a> equated his success with the North's rejection of their right to practice slavery, and southern states began <a href=\"/wiki/Secession\" title=\"Secession\">seceding from the Union</a>. To secure its independence, the new <a href=\"/wiki/Confederate_States\" class=\"mw-redirect\" title=\"Confederate States\">Confederate States</a> <a href=\"/wiki/Battle_of_Fort_Sumter\" title=\"Battle of Fort Sumter\">fired on Fort Sumter</a>, a U.S. fort in the South, and Lincoln called up forces to suppress the rebellion and restore the Union.\n</p><p>Lincoln, a moderate Republican, had to navigate a contentious array of factions with friends and opponents from both the <a href=\"/wiki/Democratic_Party_(United_States)\" title=\"Democratic Party (United States)\">Democratic</a> and Republican parties. His allies, the <a href=\"/wiki/War_Democrat\" title=\"War Democrat\">War Democrats</a> and the <a href=\"/wiki/Radical_Republicans\" title=\"Radical Republicans\">Radical Republicans</a>, demanded harsh treatment of the Southern Confederates. Anti-war Democrats (called \"<a href=\"/wiki/Copperhead_(politics)\" title=\"Copperhead (politics)\">Copperheads</a>\") despised Lincoln, and irreconcilable pro-Confederate elements plotted his assassination. He managed the factions by exploiting their mutual enmity, carefully distributing political patronage, and by appealing to the American people. His <a href=\"/wiki/Gettysburg_Address\" title=\"Gettysburg Address\">Gettysburg Address</a> appealed to <a href=\"/wiki/Nationalistic\" class=\"mw-redirect\" title=\"Nationalistic\">nationalistic</a>, <a href=\"/wiki/Republicanism\" title=\"Republicanism\">republican</a>, <a href=\"/wiki/Egalitarian\" class=\"mw-redirect\" title=\"Egalitarian\">egalitarian</a>, <a href=\"/wiki/Libertarian\" class=\"mw-redirect\" title=\"Libertarian\">libertarian</a>, and <a href=\"/wiki/Democracy\" title=\"Democracy\">democratic</a> sentiments. Lincoln scrutinized the strategy and tactics in the war effort, including the selection of generals and the <a href=\"/wiki/Union_blockade\" title=\"Union blockade\">naval blockade</a> of the South's trade. He suspended <i><a href=\"/wiki/Habeas_corpus\" title=\"Habeas corpus\">habeas corpus</a></i> in <a href=\"/wiki/Maryland\" title=\"Maryland\">Maryland</a>, and he averted British intervention by defusing the <a href=\"/wiki/Trent_Affair\" title=\"Trent Affair\"><i>Trent</i> Affair</a>. He engineered the end to slavery with his <a href=\"/wiki/Emancipation_Proclamation\" title=\"Emancipation Proclamation\">Emancipation Proclamation</a>, including his order that the Army and Navy liberate, protect, and recruit former slaves. He also encouraged <a href=\"/wiki/Border_states_(American_Civil_War)\" title=\"Border states (American Civil War)\">border states</a> to outlaw slavery, and promoted the <a href=\"/wiki/Thirteenth_Amendment_to_the_United_States_Constitution\" title=\"Thirteenth Amendment to the United States Constitution\">Thirteenth Amendment to the United States Constitution</a>, which outlawed slavery across the country.\n</p><p>Lincoln managed his own successful <a href=\"/wiki/1864_United_States_presidential_election\" title=\"1864 United States presidential election\">re-election campaign</a>. He sought to heal the war-torn nation through reconciliation. On April 14, 1865, just days after the war's end at <a href=\"/wiki/Battle_of_Appomattox_Court_House\" title=\"Battle of Appomattox Court House\">Appomattox</a>, he was attending a play at <a href=\"/wiki/Ford%27s_Theatre\" title=\"Ford&#39;s Theatre\">Ford's Theatre</a> in <a href=\"/wiki/Washington,_D.C.\" title=\"Washington, D.C.\">Washington, D.C.</a>, with his wife <a href=\"/wiki/Mary_Todd_Lincoln\" title=\"Mary Todd Lincoln\">Mary</a> when he was fatally shot by Confederate sympathizer <a href=\"/wiki/John_Wilkes_Booth\" title=\"John Wilkes Booth\">John Wilkes Booth</a>. Lincoln is remembered as a <a href=\"/wiki/Martyr\" title=\"Martyr\">martyr</a> and hero of the United States and is consistently <a href=\"/wiki/Historical_rankings_of_presidents_of_the_United_States#Scholar_survey_summary\" title=\"Historical rankings of presidents of the United States\">ranked</a> as one of the greatest presidents in American history.\n</p>\n<style data-mw-deduplicate=\"TemplateStyles:r886046785\">.mw-parser-output .toclimit-2 .toclevel-1 ul,.mw-parser-output .toclimit-3 .toclevel-2 ul,.mw-parser-output .toclimit-4 .toclevel-3 ul,.mw-parser-output .toclimit-5 .toclevel-4 ul,.mw-parser-output .toclimit-6 .toclevel-5 ul,.mw-parser-output .toclimit-7 .toclevel-6 ul{display:none}</style><div class=\"toclimit-3\"></div>\n<div class=\"mw-references-wrap\"><ol class=\"references\">\n<li id=\"cite_note-LincolnHeight-1\"><span class=\"mw-cite-backlink\"><b><a href=\"#cite_ref-LincolnHeight_1-0\">^</a></b></span> <span class=\"reference-text\"><style data-mw-deduplicate=\"TemplateStyles:r999302996\">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:\"\\\"\"\"\\\"\"\"'\"\"'\"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg\")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg\")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg\")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url(\"//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg\")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id=\"CITEREFCarpenter1866\" class=\"citation book cs1\">Carpenter, Francis B. (1866). <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/sixmonthsatwhit02carpgoog\"><i>Six Months in the White House: The Story of a Picture</i></a>. Hurd and Houghton. p.&#160;<a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/sixmonthsatwhit02carpgoog/page/n225\">217</a>.</cite><span title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Six+Months+in+the+White+House%3A+The+Story+of+a+Picture&amp;rft.pages=217&amp;rft.pub=Hurd+and+Houghton.&amp;rft.date=1866&amp;rft.aulast=Carpenter&amp;rft.aufirst=Francis+B.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fsixmonthsatwhit02carpgoog&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAbraham+Lincoln\" class=\"Z3988\"></span></span>\n</li>\n</ol></div>\n<p><br /><span class=\"error mw-ext-cite-error\" lang=\"en\" dir=\"ltr\">Cite error: There are <code>&lt;ref&#160;group&#61;lower-alpha&gt;</code> tags&#160;or <code>&#123;&#123;efn&#125;&#125;</code> templates on this page, but the references will not show without a <code>&#123;&#123;reflist&#124;group&#61;lower-alpha&#125;&#125;</code> template&#160;or <code>&#123;&#123;notelist&#125;&#125;</code> template (see the <a href=\"/wiki/Help:Cite_errors/Cite_error_group_refs_without_references\" title=\"Help:Cite errors/Cite error group refs without references\">help page</a>).\n</span>\n</p>\n<!-- \nNewPP limit report\nParsed by mw2358\nCached time: 20210731190425\nCache expiry: 86400\nReduced expiry: true\nComplications: [vary‐revision‐sha1]\nCPU time usage: 0.952 seconds\nReal time usage: 1.235 seconds\nPreprocessor visited node count: 9589/1000000\nPost‐expand include size: 62284/2097152 bytes\nTemplate argument size: 17614/2097152 bytes\nHighest expansion depth: 20/40\nExpensive parser function count: 5/500\nUnstrip recursion depth: 0/20\nUnstrip post‐expand size: 7382/5000000 bytes\nLua time usage: 0.434/10.000 seconds\nLua memory usage: 7781191/52428800 bytes\nNumber of Wikibase entities loaded: 0/400\n-->\n<!--\nTransclusion expansion time report (%,ms,calls,template)\n100.00% 1196.210      1 -total\n 50.90%  608.819      1 Template:Infobox_officeholder\n 15.55%  185.970     17 Template:Infobox_officeholder/office\n  9.01%  107.748      1 Template:Abraham_Lincoln_series\n  8.69%  103.915      1 Template:Sidebar_person/US_President\n  8.42%  100.753      1 Template:Sidebar_person\n  8.07%   96.531      1 Template:Marriage\n  7.95%   95.057      1 Template:Sidebar\n  7.58%   90.629      1 Template:Cite_book\n  7.42%   88.736      1 Template:Birth_date\n-->\n</div>"
+},
+"images": [
+"Semi-protection-shackle.svg",
+"Symbol_support_vote.svg",
+"Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+"Abraham_Lincoln_1862_signature.svg",
+"Seal_of_the_President_of_the_United_States.svg"
+]
+}
+}
