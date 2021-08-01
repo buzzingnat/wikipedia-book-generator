@@ -10,7 +10,7 @@
     - [ ] optionally, include the full text of the Wikipedia article for the initial search term.
 
 - [ ] To clarify which page to return
-    - [x] first perform a search call returning the top ~~5 or~~ 10 resulting pages
+    - [X] first perform a search call returning the top ~~5 or~~ 10 resulting pages
     - [x] have the user select their desired page from the available results.
     - [ ] make a second call returning all desired data with selected page id
 
