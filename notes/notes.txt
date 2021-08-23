@@ -1,13 +1,38 @@
+CSS printer tips:
+https://www.sitepoint.com/css-printer-friendly-pages/
+
+getting images from wikimedia:
+The final image URL will be: https://upload.wikimedia.org/wikipedia/commons/a/ab/img_name.ext, where a and b are the first and the second chars of md5sum of the img_name.ext.
+
+For example, for item jaguar (Q35694) the API will returns image name "Junior-Jaguar-Belize-Zoo.jpg", which has md5sum: 213b31ec141dafebe457e49bcd7f9329, so a=2 and b=1, or the final image URL will be: https://upload.wikimedia.org/wikipedia/commons/2/21/Junior-Jaguar-Belize-Zoo.jpg
+
 API calls:
+
+MOST RECENT I WAS WORKING WITH:
+https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=18978754&section=0&prop=links|text|displaytitle|subtitle|images|sections
+
+summary of multiple pages:
+https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Apple|Orange
+
+summary of multiple pages:
+https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&pageids=18978754|856
 
 search:
 https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=lincoln&format=json
 
 get summary and links using page id:
-https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Abraham%20Lincoln&section=0&prop=links|text
+https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=18978754&section=0&prop=links|text&displaytitle&subtitle
 
-get summary and all associated images using page id:
-https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Abraham%20Lincoln&section=0&prop=images|text
+get summary using page id for multiple pages:
+https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=18978754|856&section=0&prop=text
+
+get summary and all associated images and links using page id:
+https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=18978754&section=0&prop=links|text|displaytitle|subtitle|images
+
+for images, use this as the beginning of the link:
+https://commons.wikimedia.org/wiki/File:Pink_lady_and_cross_section.jpg#/media/File:Pink_lady_and_cross_section.jpg
+then fill in with the returned image link
+
 
 returned JSON data of queries:
 
