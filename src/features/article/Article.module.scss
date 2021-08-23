@@ -1,0 +1,17 @@
+.article {
+  text-align: left;
+  padding: .5em 0;
+  width: 80%;
+  min-width: 250px;
+  margin: 0 auto;
+
+  @media print {
+    font-size: 1.25em;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 1.33em;
+    text-align: justify;
+    padding: 0 2.5em;
+  }
+}
