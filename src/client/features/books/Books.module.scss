@@ -1,0 +1,69 @@
+$header-background-color: #008ABF;
+
+.library_container {
+	width: 450px;
+	margin: 1em;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px 2px rgba(0,0,0, .1);
+	overflow: hidden;
+	text-align: left;
+	@media print {
+		display: none;
+		opacity: 0;
+	}
+}
+
+.library_header {
+	padding: .5em 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: $header-background-color solid thin;
+}
+.marrakesh_pattern {
+	background-color: white;
+	background-image:
+	    radial-gradient($header-background-color 7px, transparent 7px),
+	    repeating-radial-gradient(
+	    	$header-background-color 0, $header-background-color 5px,
+	    	transparent 5px, transparent 16px,
+	    	$header-background-color 15px, $header-background-color 21px,
+	    	transparent 20px, transparent 47px
+	    );
+	background-size: 30px 30px, 90px 90px;
+	background-position: 0px 42px;
+}
+.cicada_stripes_pattern {
+	background-color: $header-background-color;
+	background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+	linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+	background-size: 13px, 29px, 37px, 53px;
+}
+.library_header button {
+	height: 2.5em;
+	width: 5em;
+	padding: 0.25em;
+}
+ul.library_list {
+	padding: .5em 1em;
+	margin: 0;
+	list-style: none;
+	overflow-y: scroll;
+	height: calc(100vh - 260px);
+}
+
+ul.library_list li {
+	margin: .75em 0;
+	padding: .5em;
+	border-radius: 5px;
+	border: thin solid #ddd;
+	box-shadow: #eee 2px 2px 3px;
+}
+.book_title {
+	font-weight: 600;
+}
+.book_opening {
+	font-weight: 100;
+}

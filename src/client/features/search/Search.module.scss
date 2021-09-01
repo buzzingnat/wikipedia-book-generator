@@ -1,32 +1,74 @@
+$primary: #008ABF;
+$primary-dark: #005A8F;
+$border-gray: #D0CFCE;
+$border-blue: #008ABF;
+
 .row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: calc(50vh - 1.5em);
+  left: calc(50% - 245px);
 }
 
-.left_align {
+.animate {
+  transition: all .5s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity .5s 1s;
+}
+
+.search_header {
+  position: absolute;
+  top: 1em;
+  left: calc(100% - 490px);
+}
+
+.search_header .did_you_mean {
   text-align: left;
   margin: 0 2em;
 }
 
-.flex {
+.helper_text {
+  color: rgba(0, 0, 0, .6)
+}
+
+.search_header_links {
+  position: absolute;
+  top: 4em;
+  display: flex;
+  margin: 1.5em 0;
+  left: 21px;
+}
+
+.search_header_links .flex {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  margin-left: 21px;
 }
 
-.definition_wrapper {
+.search_header_links .definition_wrapper {
   font-size: .85em;
   position: relative;
   padding: 0 .75em;
   box-sizing: border-box;
   white-space: nowrap;
   cursor: pointer;
+  color: $primary;
+  text-decoration: underline;
   &:hover {
-    color: #008ABF;
+    color: $primary-dark;
   };
   &:focus, &:active {
-    color: #005A8F;
+    color: #222;
   };
   @media screen and (min-width: 1100px) {
     flex: 1;
@@ -37,6 +79,7 @@
   }
 }
 
+/* search input field styling */
 .search_container {
   width: 490px;
   display: block;
@@ -51,12 +94,12 @@ input.search_input{
   padding: 0 1.5em;
   padding-right: 4em;
   font-size: 1rem;
-  border: 1px solid #D0CFCE;
+  border: 1px solid $border-gray;
   outline: none;
   &:focus{
-    border: 1px solid #008ABF;
+    border: 1px solid $border-blue;
     transition: 0.35s ease;
-    color: #008ABF;
+    color: $border-blue;
     &::-webkit-input-placeholder{
       transition: opacity 0.45s ease;
       opacity: 0;

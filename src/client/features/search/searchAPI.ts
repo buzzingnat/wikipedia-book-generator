@@ -40,7 +40,7 @@ export async function getArticleSummaryText(pageId: string) {
 
     // https://en.wikipedia.org/w/api.php?format=json&action=query
     // &prop=extracts&exintro&explaintext&redirects=1&titles=Apple|Orange
-
+    // https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Frequency|Cat_breeds|Domestication
     const params = {
         action: "query",
         format: "json",
@@ -58,6 +58,47 @@ export async function getArticleSummaryText(pageId: string) {
       const value: string = pair[1];
       url += "&" + key + "=" + value;
     });
+
+    return await fetch(url)
+        .then(function(response){
+          return response.json();
+        })
+        .then(function(response) {
+            return response;
+        })
+        .catch(function(error){
+          console.error(error);
+          return error;
+        });
+}
+
+export async function getArticleSummaryTextByTitle(titles: string, continueValues: string) {
+    let url = "https://en.wikipedia.org/w/api.php";
+
+    // https://en.wikipedia.org/w/api.php?format=json&action=query
+    // &prop=extracts&exintro&explaintext&redirects=1&titles=Apple|Orange
+// https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Farm_cat|Cat_breeds
+    const params = {
+        action: "query",
+        format: "json",
+        prop: "extracts",
+        exintro: "true",
+        explaintext: "true",
+        redirects: "true",
+        titles,
+    };
+
+    url = url + "?origin=*";
+
+    Object.entries(params).forEach(function(pair: [string, string]) {
+      const key: string = pair[0];
+      const value: string = pair[1];
+      url += "&" + key + "=" + value;
+    });
+
+    if (continueValues) {
+        url += continueValues;
+    }
 
     return await fetch(url)
         .then(function(response){

@@ -8,12 +8,15 @@ import {
     getArticleAsync,
     getSummaryTextAsync,
     searchAsync,
+    selectIsSearchUsed,
     selectSearchResults,
+    toggleSearchUsed,
 } from './searchSlice';
 import styles from './Search.module.scss';
 
 export function Search() {
     const searchResults = useAppSelector(selectSearchResults);
+    const isSearchUsed = useAppSelector(selectIsSearchUsed);
     const dispatch = useAppDispatch();
     const [inputValue, setInputValue] = useState('');
     const [imageHashes, setImageHashes] = useState<Record<string, string>>({});
@@ -31,7 +34,7 @@ export function Search() {
 
     return (
         <div>
-            <div className={styles.row}>
+            <div className={isSearchUsed ? classnames(styles.search_header, styles.animate) : styles.row}>
                 <form className={styles.search_container}>
                     <input
                       type="text"
@@ -46,7 +49,13 @@ export function Search() {
                     <button
                       onClick={(event) => {
                         event.preventDefault();
-                        dispatch(searchAsync(inputValue))
+                        if (!inputValue) {
+                            return;
+                        }
+                        dispatch(searchAsync(inputValue));
+                        if (!isSearchUsed) {
+                            dispatch(toggleSearchUsed());
+                        }
                       }}
                     >
                         <img
@@ -57,15 +66,15 @@ export function Search() {
                     </button>
                 </form>
             </div>
-            <div className={classnames(styles.left_align)}>
-                <img src={`https://upload.wikimedia.org/wikipedia/commons/${
+            <div className={isSearchUsed ? classnames(styles.search_header_links, styles.did_you_mean, styles.fade) : classnames(styles.search_header_links, styles.hidden)}>
+                {false && <img src={`https://upload.wikimedia.org/wikipedia/commons/${
                     imageHashes?.imageUrl?.substring(0, 1) || '0'
                 }/${
                     imageHashes?.imageUrl?.substring(0, 2) || '00'
                 }/${
                     imageUrl
-                }`} />
-                Make a book from...
+                }`} /> /* this is a mock up of inserting images from wikimedia */}
+                <span className={styles.helper_text}>Did you mean...</span>
                 <dl className={styles.flex}>
                     {searchResults.map((result) => (
                         <div

@@ -1,0 +1,48 @@
+.App .content_container {
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+  top: 6em;
+  position: relative;
+  @media print {
+    top: 0;
+  }
+}
+
+.App_header {
+  height: 100vh;
+  font-size: calc(10px + 2vmin);
+}
+
+.App_header h1 {
+  position: absolute;
+  top: calc(50vh - 3em);
+  width: 100%;
+  text-align: center;
+  transition: all .5s;
+}
+
+.App_header_navbar {
+  position: absolute;
+  width: 100%;
+  min-height: 3em;
+  height: 3em;
+  font-size: .8em;
+}
+
+.App_header_navbar h1 {
+  position: absolute;
+  top: 1em;
+  left: 21px;
+  transform: translateX(0%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* override styles when printing */
+@media print {
+  .App_header {
+    display: none;
+  }
+}
