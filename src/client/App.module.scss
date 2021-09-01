@@ -3,9 +3,12 @@
   display: flex;
   justify-content: space-evenly;
   top: 6em;
-  position: relative;
+  position: absolute;
+  margin-left: calc(50vw - 30em);
   @media print {
     top: 0;
+    left: 0;
+    margin: 0;
   }
 }
 
@@ -23,11 +26,15 @@
 }
 
 .App_header_navbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   min-height: 3em;
-  height: 3em;
-  font-size: .8em;
+  height: 7em;
+  font-size: 0.8em;
+  background: white;
+  z-index: 1000;
+  border-bottom: #eee solid thin;
+  box-shadow: #eee 0px 0px 4px;
 }
 
 .App_header_navbar h1 {

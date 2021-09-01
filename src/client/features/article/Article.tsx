@@ -7,8 +7,7 @@ import {
     selectDetailResults,
     selectSummaryResults,
     selectSummaryChildrenResults,
-    selectSummaryChildrenContOneResults,
-    // selectSummaryChildrenContTwoResults,
+    selectSummaryChildrenContQueryResults,
 } from '../search/searchSlice';
 import styles from './Article.module.scss';
 
@@ -16,16 +15,12 @@ export function Article() {
     const detailResults = useAppSelector(selectDetailResults);
     const summaryResults = useAppSelector(selectSummaryResults);
     const summaryChildrenResults = useAppSelector(selectSummaryChildrenResults);
-    const summaryChildrenContOneResults = useAppSelector(selectSummaryChildrenContOneResults);
-    // const summaryChildrenContTwoResults = useAppSelector(selectSummaryChildrenContTwoResults);
+    const summaryChildrenContQueryResults = useAppSelector(selectSummaryChildrenContQueryResults);
     const dispatch = useAppDispatch();
     const [linkList, setLinkList] = useState([] as string[]);
 
-    // const formattedSummary = summaryResults.extract.split('\n');
     const formattedSummaryChildren = Object.values(summaryChildrenResults);
-    const formattedSummaryChildrenContOne = Object.values(summaryChildrenContOneResults);
-    // const formattedSummaryChildrenContTwo = Object.values(summaryChildrenContTwoResults || {});
-    console.log(summaryResults.extract);
+    const formattedSummaryChildrenContQuery = Object.values(summaryChildrenContQueryResults);
 
     React.useEffect(() => {
         if (detailResults?.text && detailResults?.links?.length > 0) {
@@ -35,6 +30,8 @@ export function Article() {
             const paragraphRegEx = /(<p>.*\n*<\/p>)/g;
             const paraMatches = [...detailResults.text['*'].matchAll(paragraphRegEx)];
             const paragraphs = paraMatches.map(match => match[1]);
+
+            // regex that also pulls out text from summary that includes link: /<a href=\"\/wiki\/(\w+)\".*?">(.*?)<\/a>/g;
             // do regex matching on the paragraphs to find links
             const linkRegEx = /<a href=\"\/wiki\/(\w+)\"/g;
             const linkMatches = [...paragraphs.join('').matchAll(linkRegEx)];
@@ -83,14 +80,24 @@ export function Article() {
                 <h2>{summaryResults.title}</h2>
                 {summaryResults.extract.split('\n').map(text => <p key={Math.trunc(Math.random()*100000)}>{text}</p>)}
                 {formattedSummaryChildren.map((summary, index) => {
-                    console.log('creating summaries...');
+                    console.log('pageId', summary.pageid);
                     let extract = ['']; 
                     if (summary.extract) {
                         extract = summary.extract.split('\n');
-                    } else if (formattedSummaryChildrenContOne[index].extract) {
-                        extract = formattedSummaryChildrenContOne[index].extract.split('\n');
-                    // } else if (formattedSummaryChildrenContTwo[index].extract) {
-                    //     extract = formattedSummaryChildrenContTwo[index].extract.split('\n');
+                    } else {
+                        for (let i = 0; i < formattedSummaryChildrenContQuery.length; i++) {
+                            console.log('displaying continued info', formattedSummaryChildrenContQuery[i].query.pages[summary.pageid+'']);
+                            if (formattedSummaryChildrenContQuery[i].query.pages[summary.pageid+''].extract) {
+                                console.log('extract exists!');
+                                extract = formattedSummaryChildrenContQuery[i].query.pages[summary.pageid+''].extract.split('\n');
+                            } else {
+                                console.log('keep looking...');
+                            }
+                            // extract = formattedSummaryChildrenContQuery[i].query.pages[summary.pageid+''].extract.split('\n');
+                        }
+                    }
+                    if (extract[0] === '') {
+                        console.log(`\n\nNO EXTRACT FOUND FOR ${summary.title}\n\n`);
                     }
                     return (
                         <React.Fragment key={summary.title}>

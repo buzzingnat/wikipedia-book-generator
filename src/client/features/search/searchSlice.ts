@@ -27,9 +27,13 @@ interface ArticleDetails {
 interface Summary {
   extract: string;
   ns: string;
-  pagid: string;
+  pageid: number;
   title: string;
 }
+
+type Pages = {
+  [key: string]: Summary;
+};
 
 export interface SearchState {
   value: string;
@@ -38,12 +42,12 @@ export interface SearchState {
   isSearchUsed: Boolean;
   summary: Summary;
   summaryChildren: Summary[];
-  summaryChildrenContinueOne: Summary[];
+  summaryChildrenContinueQuery: {query: { pages: Pages}, continue: {}}[];
   statusSearch: 'idle' | 'loading' | 'failed';
   statusDetails: 'idle' | 'loading' | 'failed';
   statusSummary: 'idle' | 'loading' | 'failed';
   statusSummaryChildren: 'idle' | 'loading' | 'failed';
-  statusSummaryChildrenContinueOne: 'idle' | 'loading' | 'failed';
+  statusSummaryChildrenContinueQuery: 'idle' | 'loading' | 'failed';
 }
 
 const initialState: SearchState = {
@@ -67,16 +71,16 @@ const initialState: SearchState = {
   summary: {
     extract: '',
     ns: '',
-    pagid: '',
+    pageid: 0,
     title: ''
   },
   summaryChildren: [],
-  summaryChildrenContinueOne: [],
+  summaryChildrenContinueQuery: [],
   statusSearch: 'idle',
   statusDetails: 'idle',
   statusSummary: 'idle',
   statusSummaryChildren: 'idle',
-  statusSummaryChildrenContinueOne: 'idle',
+  statusSummaryChildrenContinueQuery: 'idle',
 };
 
 export const searchAsync = createAsyncThunk(
@@ -102,23 +106,104 @@ export const getArticleAsync = createAsyncThunk(
   }
 );
 
+/* This code can search for more than 50 titles and still return results successfully */
 export const getArticleSummaryByTitleAsync = createAsyncThunk(
   'search/getArticleSummaryTextByTitle',
   async (titles: string) => {
-    const response = await getArticleSummaryTextByTitle(titles, "");
-    let continueOne;
+    // A list of titles to work on.
+    // Separate values with | or alternative.
+    // Maximum number of values is 50 (500 for clients allowed higher limits).
+    let tempTitles = titles;
+    let titlePosition = 0;
+    const maxTitles = 50;
+    const titleArray = titles.split('|');
+    if (titleArray.length > maxTitles) {
+      tempTitles = titleArray.splice(titlePosition, maxTitles).join('|');
+    }
+    console.log('a, tempTitles', tempTitles);
+    const response = await getArticleSummaryTextByTitle(tempTitles, "");
+    console.log('b');
+    let continueQuery = [] as any[];
     if (response.continue) {
+      console.log('1');
       const continueString = Object.entries(response.continue).map(pair => {
         return `&${pair[0]}=${pair[1]}`;
       }).join('');
-      continueOne = await getArticleSummaryTextByTitle(titles, continueString);
+      console.log('2');
+      continueQuery.push(await getArticleSummaryTextByTitle(tempTitles, continueString));
+      console.log('3');
+      let count = 0;
+      console.log('4');
+      console.log(continueQuery[continueQuery.length-1].batchcomplete === "")
+      while (!!continueQuery[continueQuery.length-1].continue && count < 30) {
+        console.log('making a new api call...', continueQuery[continueQuery.length-1].continue);
+        const continueString = Object.entries(continueQuery[continueQuery.length-1].continue).map(pair => {
+          return `&${pair[0]}=${pair[1]}`;
+        }).join('');
+        console.log('the new query string is...', continueString);
+        continueQuery.push(await getArticleSummaryTextByTitle(tempTitles, continueString));
+        count++;
+      }
     }
+    console.log('c, continue query...');
+    console.log(continueQuery);
     return {
       initial: response.query.pages,
-      continueOne: continueOne.query.pages || null,
+      continueQuery: continueQuery || [],
     };
   }
 );
+
+/* this works so long as the initial set of titles to search for is NO MORE THAN 50 TITLES LONG
+export const getArticleSummaryByTitleAsyncOld = createAsyncThunk(
+  'search/getArticleSummaryTextByTitle',
+  async (titles: string) => {
+    // A list of titles to work on.
+    // Separate values with | or alternative.
+    // Maximum number of values is 50 (500 for clients allowed higher limits).
+    let tempTitles = titles;
+    let titlePosition = 0;
+    const maxTitles = 50;
+    const titleArray = titles.split('|');
+    if (titleArray.length > maxTitles) {
+      tempTitles = titleArray.splice(titlePosition, maxTitles).join('|');
+    }
+    console.log('a, tempTitles', tempTitles);
+    const response = await getArticleSummaryTextByTitle(tempTitles, "");
+    console.log('b');
+    console.log(response);
+    let continueQuery = [] as any[];
+    if (response.continue) {
+      console.log('1');
+      const continueString = Object.entries(response.continue).map(pair => {
+        return `&${pair[0]}=${pair[1]}`;
+      }).join('');
+      console.log('2');
+      continueQuery.push(await getArticleSummaryTextByTitle(tempTitles, continueString));
+      console.log('3');
+      let count = 0;
+      console.log('4');
+      // continueQuery[continueQuery.length-1].batchcomplete !== ""
+      console.log(continueQuery[continueQuery.length-1].batchcomplete === "")
+      while (!!continueQuery[continueQuery.length-1].continue && count < 30) {
+        console.log('making a new api call...', continueQuery[continueQuery.length-1].continue);
+        const continueString = Object.entries(continueQuery[continueQuery.length-1].continue).map(pair => {
+          return `&${pair[0]}=${pair[1]}`;
+        }).join('');
+        console.log('the new query string is...', continueString);
+        continueQuery.push(await getArticleSummaryTextByTitle(tempTitles, continueString));
+        count++;
+      }
+    }
+    console.log('continue query...');
+    console.log(continueQuery);
+    return {
+      initial: response.query.pages,
+      continueQuery: continueQuery || [],
+    };
+  }
+);
+*/
 
 export const getSummaryTextAsync = createAsyncThunk(
   'search/getArticleSummaryText',
@@ -161,16 +246,26 @@ export const searchSlice = createSlice({
         state.statusSummary = 'idle';
         state.summary = action.payload;
       })
+      .addCase(getArticleSummaryByTitleAsyncOld.pending, (state) => {
+        state.statusSummaryChildren = 'loading';
+        state.statusSummaryChildrenContinueQuery = 'loading';
+      })
+      .addCase(getArticleSummaryByTitleAsyncOld.fulfilled, (state, action) => {
+        state.statusSummary = 'idle';
+        state.statusSummaryChildrenContinueQuery = 'idle';
+        state.summaryChildren = action.payload.initial || [];
+        state.summaryChildrenContinueQuery = action.payload.continueQuery || [];
+      })
       .addCase(getArticleSummaryByTitleAsync.pending, (state) => {
         state.statusSummaryChildren = 'loading';
-        state.statusSummaryChildrenContinueOne = 'loading';
+        state.statusSummaryChildrenContinueQuery = 'loading';
       })
       .addCase(getArticleSummaryByTitleAsync.fulfilled, (state, action) => {
         state.statusSummary = 'idle';
-        state.statusSummaryChildrenContinueOne = 'idle';
+        state.statusSummaryChildrenContinueQuery = 'idle';
         console.log(action.payload);
         state.summaryChildren = action.payload.initial || [];
-        state.summaryChildrenContinueOne = action.payload.continueOne || [];
+        state.summaryChildrenContinueQuery = action.payload.continueQuery || [];
       });
   },
 });
@@ -180,7 +275,7 @@ export const { toggleSearchUsed } = searchSlice.actions;
 export const selectSearchResults = (state: RootState) => state.search.results;
 export const selectSummaryResults = (state: RootState) => state.search.summary;
 export const selectSummaryChildrenResults = (state: RootState) => state.search.summaryChildren;
-export const selectSummaryChildrenContOneResults = (state: RootState) => state.search.summaryChildrenContinueOne;
+export const selectSummaryChildrenContQueryResults = (state: RootState) => state.search.summaryChildrenContinueQuery;
 export const selectDetailResults = (state: RootState) => state.search.details;
 export const selectIsSearchUsed = (state: RootState) => state.search.isSearchUsed;
 

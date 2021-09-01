@@ -30,12 +30,21 @@ $border-blue: #008ABF;
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 1.5em;
+  position: fixed;
+  top: 8em;
   left: 21px;
   max-width: 20em;
   font-weight: 600;
   font-size: .8em;
+  height: calc(100vh - 8em);
+  overflow-y: scroll;
+  @media print {
+    position: relative;
+    top: 0;
+    left: 0;
+    weight: 400;
+    line-height: 1em;
+  }
 }
 
 .article ul li {
@@ -50,4 +59,7 @@ $border-blue: #008ABF;
   &:focus, &:active {
     color: #222;
   };
+  @media print {
+    color: #000;
+  }
 }
